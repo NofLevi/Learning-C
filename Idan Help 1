@@ -1,0 +1,27 @@
+#include <stdio.h>
+ 
+int main()
+{
+int a,b ;
+    printf("Enter Numbers 1:  ");
+    scanf("%d",&a);
+   
+    printf("Enter Numbers 2:  ") ;
+    scanf("%d",&b);
+   
+    printf("%d\n",a+b);
+    if(a+b==15)
+    {
+    printf("hello");
+    }
+    else if (a+b==10)
+ 
+    {
+        printf("noob");
+    }
+    else
+    {
+        printf("salam alekum");
+    }
+    return 0;
+}
