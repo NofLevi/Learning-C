@@ -1,0 +1,13 @@
+#include <stdio.h>
+#define PAI 3.14
+void main()
+{
+float rad,shetah,hekef;
+    printf("type the radius: ");
+    scanf("%f",&rad);
+    shetah = PAI * rad * rad;
+    hekef = 2 * PAI * rad;
+    printf("the field of the circle is:%f and the scope is:%f",hekef,shetah);
+}
+
+FIRST PROJECT
