@@ -1,0 +1,12 @@
+#include <stdio.h>
+void main()
+{
+    int a,b,c;
+    printf("type the first number: ");
+    scanf("%d",&a);
+    printf("type the second number: ");
+    scanf("%d",&b);
+    printf("choose the third number: ");
+    scanf("%d",&c);
+    printf("%d,%d,%d",c,b,a);
+}
