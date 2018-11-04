@@ -1,16 +1,23 @@
 #include <stdio.h>
 void main()
 {
-    int price,amount,tax,discount;
+    float price,amount,tax,discount,temptax,tempdiscount;
     printf("type the price of the item: ");
-    scanf("%d",&price);
+    scanf("%f",&price);
     printf("type the amount of the items: ");
-    scanf("%d",&amount);
+    scanf("%f",&amount);
     printf("type the precentage of taxes: ");
-    scanf("%d",&tax);
+    scanf("%f",&tax);
     printf("type the precentage of the discount: ");
-    scanf("%d",&discount);
-    tax=tax/100;
-    tax=tax+1;
-    printf("Price+Tax: %d",tax*price);
+    scanf("%f",&discount);
+    temptax=tax;
+    temptax=temptax/100;
+    temptax=temptax+1;
+    printf("Price+Tax: %f",temptax*price);
+    tempdiscount=discount;
+    tempdiscount=tempdiscount/100;
+    tempdiscount=tempdiscount+1;
+    printf("Price+tax+discount: %f\n",price*temptax*tempdiscount);
+    printf("Overall price: %f",price*temptax*tempdiscount*amount
+    );
 }
