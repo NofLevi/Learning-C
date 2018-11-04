@@ -1,0 +1,8 @@
+#include <stdio.h>
+void main()
+{
+    int a,b,c;
+    printf("type 3 numbers (click enter after every number):\n");
+    scanf("%d\n%d\n%d",&a,&b,&c),
+    printf("the average is: %d",(a+b+c)/3);
+}
