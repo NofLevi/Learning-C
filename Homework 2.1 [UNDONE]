@@ -1,1 +1,16 @@
-
+#include <stdio.h>
+void main()
+{
+    int price,amount,tax,discount;
+    printf("type the price of the item: ");
+    scanf("%d",&price);
+    printf("type the amount of the items: ");
+    scanf("%d",&amount);
+    printf("type the precentage of taxes: ");
+    scanf("%d",&tax);
+    printf("type the precentage of the discount: ");
+    scanf("%d",&discount);
+    tax=tax/100;
+    tax=tax+1;
+    printf("Price+Tax: %d",tax*price);
+}
