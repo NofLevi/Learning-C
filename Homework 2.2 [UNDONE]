@@ -2,7 +2,9 @@
 void main()
 {
     int a,b,c;
+    float avg;
     printf("type 3 numbers (click enter after every number):\n");
     scanf("%d\n%d\n%d",&a,&b,&c),
-    printf("the average is: %d",(a+b+c)/3);
+    avg=(a+b+c);
+    printf("the average is: %f",avg/3);
 }
