@@ -21,7 +21,7 @@ int a,b ;
     }
     else
     {
-        printf("salam alekum");
+        printf("sup");
     }
     return 0;
 }
