@@ -1,0 +1,13 @@
+#include <stdio.h>
+void main()
+{
+int num;
+float price,vat,discount,vprice,pvprice,total;
+printf("type the data");
+scanf("%f%f%f%d",&price,&vat,&discount,&num);
+vprice=price*(1+vat / 100);
+dvprice=vprice- (vprice*discount / 100);
+total = dvprice*num;
+printf("mehir kolel maam:%f\n mehir kolel hanaha:%f\n sah atashalum:%f", vprice, dvprice, total);
+
+}
