@@ -2,14 +2,15 @@
 void main()
 {
     int a,b;
-    printf("type 2 grades of yours: ");
+    printf("type 2 grades of yours [first english second is math: ");
     scanf("%d%d",&a,&b);
     if (((a+b)/2)>90)
     {
         printf("good student");
     }
-    else
+    if (a>85)
     {
-        printf("avg student");
+       printf("\nastudent pator mi anglit");
     }
+    
 }
