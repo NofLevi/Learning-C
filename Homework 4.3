@@ -15,3 +15,20 @@ void main()
         printf("score isnt logical");
     }
 }
+
+
+#include <stdio.h>
+void main()
+{
+    int id,score,id2,score2;
+    printf("type your student id then your score: ");
+    scanf("%d%d",&id,&score);
+    if((score<=100) || (score>=0))
+    {
+        printf("the score is logical");
+    }
+    else
+    {
+        printf("there is a mistake in the score");
+    }
+}
