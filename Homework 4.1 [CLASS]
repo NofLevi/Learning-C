@@ -1,11 +1,11 @@
 #include <stdio.h>
-#define price=200
-void main()
+#define price 200
+int main()
 {
 	int age;
-	printf("how old are u");
-	scanf(%d",&age);
-	if (age>=50)||(age<=10)
+	printf("how old are u: ");
+	scanf("%d",&age);
+	if ((age>=50)||(age<=10))
 	{
 	printf("you have to pay: %d\n",price-50);
 }
