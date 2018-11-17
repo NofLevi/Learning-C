@@ -6,11 +6,14 @@ void main()
     scanf("%d%d",&id,&score);
     printf("type the second student information id then score: ");
     scanf("%d%d",&id2,&score2);
-    if (((score>=0)&&(score<=100))&&((score2>=0)&&(score2<=100)))
+    if (((score>=0)&&(score<=100))&&((score2>=0)&&(score2<=100))&&(score>score2))
     {
-        printf("the score is logical"\n);
-        
+        printf("the score is logical\n the higher score student is %d",id);     
     }
+    else if ((((score>=0)&&(score<=100))&&((score2>=0)&&(score2<=100))&&(score<score2)))
+    {
+    	printf("the score is logical\n the higher score student is %d",id2);
+	}
     else
     {
         printf("there is a mistake in the score");
