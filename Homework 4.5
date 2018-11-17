@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main()
+{
+	int minimum,maximum,tester;
+	printf("type the max and minimum iron in blood: ");
+	scanf("%d%d",&maximum,&minimum);
+	printf("what is ur iron lvl in the blood ");
+	scanf("%d",&tester);
+	if ((minimum<=tester)&&(tester<=maximum))
+	{
+		printf("iron lvl on blood is ok");
+	}
+	else
+	{
+		printf("iron lvl on blood is not ok u should discuss with the doctor");
+	}
+}
