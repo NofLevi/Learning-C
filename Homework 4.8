@@ -1,0 +1,25 @@
+#include <stdio.h>
+#define minimum 3200
+#define sharlimod 10000
+int main()
+{
+	int avgscore,familyincome;
+printf("type the average score then the family income: ");
+scanf("%d%d",&avgscore,&familyincome);
+if((avgscore>80)&&(familyincome<minimum))
+{
+	printf("gova amilga hi 50ahoz she ze yotze %d",sharlimod/2);
+}
+else if((avgscore<80)&&(avgscore>0)&&(familyincome<minimum))
+{
+	printf("gova amilga hi 30ahoz she shave le %d",sharlimod*0.3);
+}
+else if((familyincome>minimum)&&(familyincome<6000)&&(avgscore>90)&&(avgscore<=100))
+{
+	printf("gova amilga hi begova 20% she shave le %d",sharlimod*0.2);
+}
+else
+{
+	printf("the studet paying the full price %d",sharlimod);
+}
+}
