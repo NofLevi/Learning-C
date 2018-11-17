@@ -4,28 +4,12 @@ void main()
     int id,score,id2,score2;
     printf("type your student id then your score: ");
     scanf("%d%d",&id,&score);
-    printf("type second id and second score: ");
+    printf("type the second student information id then score: ");
     scanf("%d%d",&id2,&score2);
-    if((0<=score)||(score<=100))
+    if (((score>=0)&&(score<=100))&&((score2>=0)&&(score2<=100)))
     {
-        printf("the score is logical");
-    }
-    else
-    {
-        printf("score isnt logical");
-    }
-}
-
-
-#include <stdio.h>
-void main()
-{
-    int id,score,id2,score2;
-    printf("type your student id then your score: ");
-    scanf("%d%d",&id,&score);
-    if((score<=100) || (score>=0))
-    {
-        printf("the score is logical");
+        printf("the score is logical"\n);
+        
     }
     else
     {
