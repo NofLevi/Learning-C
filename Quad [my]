@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+float a,b,c,d;
+printf("Type the  A,B,C of misvaha riboit");
+scanf("%f%f%f",&a,&b,&c);
+pow(d,2)-4*a*c;
+if (d<0)
+{
+printf("no answer");
+}
+else if (d==0)
+{
+printf("there is single answer: %f",(-b/2*a));
+}
+else
+{
+printf("the answers are: %f and %f",((-b-sqrt(d))/2*a),((-b+sqrt(d))/2*a));
+}
+}
+
