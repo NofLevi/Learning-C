@@ -1,0 +1,40 @@
+#include <stdio.h>
+void main()
+{
+    float a,b;
+    int i;
+    puts("type 2 numbers:");
+    scanf("%f%f",&a,&b);
+    printf("Options\n1.for the high number\n2.for the low number\n3.the average of the numbers\n");
+    scanf("%d",&i);
+    switch(i)
+    {
+        case(1):
+        {
+            if(a>b)
+            {
+                printf("the high number is %f",a);
+                break;
+            }
+            else
+            {
+                printf("the high number is %f",b);
+                break;
+            }
+        }
+        case(2):
+        {
+            if(a<b)
+            {
+                printf("the lower number is %f",a);
+                break;
+            }
+            else
+            printf("the lower number is %f",b);
+            break;
+        }
+        case(3):
+        printf("the average of these numbers is:%f",(a+b)/2);
+        break;
+    }
+}
