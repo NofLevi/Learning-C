@@ -1,0 +1,28 @@
+#include <stdio.h>
+void main()
+{
+    char ch;
+    printf("Enter any single number/symbol/letter/capital letter from your keyboard: ");
+    scanf("%c",&ch);
+    
+    if ((ch>=0)&&(ch<=32))
+    {
+        printf("the key you choose is a command key");
+    }
+    else if ((ch>=65)&&(ch<=90))
+    {
+    printf("the key is a capital letter");
+    }
+    else if ((ch>=97)&&(ch<=122))
+    {
+        printf("the key is a small letter");
+    }
+    else if ((ch>=48)&&(ch<=57))
+    {
+        printf("the key is a number");
+    }
+    else
+    {
+        printf("the key is a symbol");
+    }
+}
