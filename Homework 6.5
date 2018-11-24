@@ -1,28 +1,28 @@
 #include <stdio.h>
-void main()
+void
+main ()
 {
-    float x,y,sum;
-    char opera;
-    printf("Enter Number mathematical operator then another number: ");
-    scanf("%f%c%f",&x,&opera,&y);
-    switch(opera)
+  float x, y, sum;
+  char op;
+  printf ("Enter Number mathematical operator then another number: ");
+  scanf ("%f%c%f", &x, &op, &y);
+  switch (op)
     {
-        case '+': 
-        printf("%f",sum=x+y);
-        break;
-        case '-': 
-        printf("%f",sum=x-y);
-        break;
-        case '*': 
-        printf("%f",sum=x*y);
-        break;
-        case '/': 
-        printf("%f",sum=x/y);
-        break;
-        
+    case '+':
+      printf ("%f", x + y);
+      break;
+    case '-':
+      printf ("%f", x - y);
+      break;
+    case '*':
+      printf ("%f", x * y);
+      break;
+    case '/':
+      printf ("%f", x / y);
+      break;
+
     }
-  
-    
-    
+
+
+
 }
-    
