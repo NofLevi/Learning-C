@@ -36,5 +36,9 @@ void main()
         case(3):
         printf("the average of these numbers is:%f",(a+b)/2);
         break;
+        default:
+        {
+            printf("the number of the option you choose isnt exist please try again");
+        }
     }
 }
