@@ -1,0 +1,13 @@
+#include <stdio.h>
+void main()
+{
+char ch;
+printf("Enter 1 small english letter: ");
+ch = getchar();
+if ((ch>=97)&&(ch<=122))
+{
+    ch = (ch - 32);
+    putchar(ch);
+}
+
+}
