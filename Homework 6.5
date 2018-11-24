@@ -4,6 +4,7 @@ main ()
 {
   float x, y, sum;
   char op;
+  int mod;
   printf ("Enter Number mathematical operator then another number: ");
   scanf ("%f%c%f", &x, &op, &y);
   switch (op)
@@ -20,9 +21,8 @@ main ()
     case '/':
       printf ("%f", x / y);
       break;
-
+    case '%':
+      printf("%f",x % y);
+      break;
     }
-
-
-
 }
