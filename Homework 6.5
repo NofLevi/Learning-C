@@ -1,0 +1,37 @@
+#include <stdio.h>
+void main()
+{
+    float x,y,sum;
+    char opera;
+    printf("Enter Number mathematical operator then another number: ");
+    scanf("%f%c%f",&x,&opera,&y);
+    switch(opera)
+    {
+        case(43): 
+        sum=x+y
+        printf("%f",sum);
+        break;
+        case(45): 
+        sum=x-y;
+        printf("%f",sum);
+        break;
+        case(42): 
+        sum=x*y
+        printf("%f",sum);
+        break;
+        case(47): 
+        sum=x/y;
+        printf("%f",sum);
+        break;
+        default
+        {
+        sum=x%y  
+        printf("%f");
+        }
+        
+    }
+  
+    
+    
+}
+    
