@@ -1,31 +1,33 @@
 #include <stdio.h>
 int main()
 {
-  int a, b, c;
+  int a, b, c,temp;
   printf ("Enter 2 numbers:\n");
   scanf ("%d",&a);
   scanf("%d",&b);
-  c = a + b;
-  
+  temp = 0;
   if (a < b)
     {
       while (b>=a)
-	{
-	  printf ("%d  ", b);
-	  b--;
-	}
-
+    {
+      printf ("%d  ", b);
+      b--;
+      temp=temp + b;
+    }
+ 
     }
   else if (b < a)
     {
       while (a >= b)
-	{
-	  printf ("%d ", a);
-	  a--;
-	}
+    {
+      printf ("%d ", a);
+      a--;
+      temp = temp +a;
     }
-	else
-	{
-	    printf("\n%d\nthe sum is:%d",b,b);
-	}
     }
+    else
+    {
+        printf("\n%d\nthe sum is:%d",b,b);
+    }
+    printf("\nthe sum of these numbers is:%d",temp);
+}
