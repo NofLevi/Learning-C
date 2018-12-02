@@ -1,23 +1,25 @@
 #include <stdio.h>
 void main()
 {
-    int a,b,c;
-    printf("Enter 2 numbers: ");
-    scanf("%d%d",&a,&b);
-    c = a + b;
-    while ((c<=a)&&(c>))
+  int a, b, c;
+  printf ("Enter 2 numbers:\n ");
+  scanf ("%d%d", &a, &b);
+  c = a + b;
+  if (a < b)
     {
-        c--;
-        if (a<b)
-        {
-            
-            printf("%d ",c);
-            
-        }
-        else
-        {
-            printf("%d ",c);
-        }
+      while (c <= b)
+	{
+	  printf ("%d ", c);
+	  c--;
+	}
+	
     }
-
-}
+  else if (b<a)
+    {
+      while (c <= a)
+	{
+	  printf ("%d ", c);
+	  c--;
+	}
+    }
+}	
