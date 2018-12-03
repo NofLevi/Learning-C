@@ -1,0 +1,44 @@
+#include <stdio.h>
+#define N 3869
+void main()
+{
+    int positive,negative,mudolo;
+    positive = 0 ;
+    negative = 0 ;
+    mudolo = 10000;
+    
+    
+ while (N%mudolo>0)
+ {
+     switch (N)
+ {
+     case (N>1000):
+     if (N%2==0)
+     {
+     positive = positive + 1 ;
+     mudolo = mudolo - 9000 ;
+     break;
+     }
+     else 
+     {
+     negative = negative + 1;
+     mudolo = mudolo - 9000 ;
+     break;
+     }
+     case(N>100):
+     if (n%2==0)
+     {
+        positive = positive + 1;
+        mudolo = mudolo - 900 ;
+        break;
+     }
+     else
+     {
+         negative = negative + 1;
+         mudolo = mudolo - 900;
+         break;
+     }
+     case(N>100)
+     }
+ }
+ }
