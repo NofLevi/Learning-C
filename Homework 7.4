@@ -12,7 +12,7 @@ void main()
  {
      switch (N)
  {
-     case (N>1000):
+     case ((N>1000)&&(N<10000)):
      if (N%2==0)
      {
      positive = positive + 1 ;
@@ -25,8 +25,8 @@ void main()
      mudolo = mudolo - 9000 ;
      break;
      }
-     case(N>100):
-     if (n%2==0)
+     case((N>100)&&(N<1000)):
+     if (N%2==0)
      {
         positive = positive + 1;
         mudolo = mudolo - 900 ;
@@ -38,7 +38,7 @@ void main()
          mudolo = mudolo - 900;
          break;
      }
-     case(N>100):
+     case((N<100)&&(N>10)):
      if (N%2==0)
      {
          positive = positive + 1;
@@ -51,7 +51,7 @@ void main()
          mudolo = mudolo - 90;
          break;
      }
-     case(n<10):
+     case((N<10)&&(N>=1)):
      if (N%2==0)
      {
          positive = positive + 1;
@@ -68,3 +68,4 @@ void main()
      }
  }
  printf("there is :%d positive numbers and :%d negative numbers",positive,negative);
+}
