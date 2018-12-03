@@ -38,7 +38,33 @@ void main()
          mudolo = mudolo - 900;
          break;
      }
-     case(N>100)
+     case(N>100):
+     if (N%2==0)
+     {
+         positive = positive + 1;
+         mudolo = mudolo - 90;
+         break;
+     }
+     else
+     {
+         negative = negative + 1;
+         mudolo = mudolo - 90;
+         break;
+     }
+     case(n<10):
+     if (N%2==0)
+     {
+         positive = positive + 1;
+         mudolo = mudolo - 10;
+         break;
+     }
+     else
+     {
+         negative = negative + 1;
+         mudolo = mudolo - 10;
+         break;
+     }
+     
      }
  }
- }
+ printf("there is :%d positive numbers and :%d negative numbers",positive,negative);
