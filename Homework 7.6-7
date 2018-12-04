@@ -9,16 +9,16 @@ void main()
     a = a - 1;
     if (a>0)
     {
-    while (a>0)
-    {
+    do {
         temp = temp * a;
         a--;
     }
+    while (a>0);
     printf("the answer is:%d ",temp);
     }
     else 
     {
-        printf("Error: dont take negative numbers\n");
+    printf("Error: dont take negative numbers\n");
     goto LOOP;
     }
 }
