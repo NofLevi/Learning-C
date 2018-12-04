@@ -1,0 +1,25 @@
+#include <stdio.h>
+void main()
+{
+int age,ppls,totalage;
+ppls = 0;
+totalage =0;
+printf("Enter your age:");
+scanf("%d",age);
+if (age>0)
+{
+    while (age>0)
+    {
+        ppls = ppls + 1;
+        totalage = totalage + age;
+      printf("enter your age");
+      scanf("%d",&age);
+      
+    }
+    printf("The average age in this college is %d",totalage/ppls);
+}
+else 
+{
+    printf("no one register to this college");
+}
+}
