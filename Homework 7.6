@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <math.h>
+void main()
+{
+    unsigned int a,temp;
+    printf("Enter 1 positive number: ");
+    scanf("%u",&a);
+    temp = a;
+    a = a - 1;
+    while (a>0)
+    {
+        temp = temp * a;
+        a--;
+    }
+    printf("the answer is:%u ",temp);
+}
