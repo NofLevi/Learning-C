@@ -2,17 +2,16 @@
 void main()
 {
     int a,temp;
-    printf("Enter 1 positive number: ");
-    scanf("%d",&a);
     temp = a;
     a = a - 1;
     do
     {
-        printf("why did u put negative number ?\nEnter 1 positive number:");
-        scanf("%d",a);
-    }
-    while(a<0);
-        do 
+    printf("Enter 1 positive number: ");
+    scanf("%d",&a);
+    }while(a<0);
+    
+    while (a>0)
+    do 
     {
          temp = temp * a;
         a--;
