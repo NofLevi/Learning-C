@@ -2,20 +2,18 @@
 void main()
 {
     int a,temp;
-    temp = a;
-    a = a - 1;
     do
     {
     printf("Enter 1 positive number: ");
     scanf("%d",&a);
-    }while(a<0);
-    
+    temp = a;
+    a = a - 1;
+    }
+    while(a<0);
     while (a>0)
-    do 
     {
-         temp = temp * a;
+        temp = temp * a;
         a--;
     }
-    while(a>0);
-    printf("The answer is:%d",temp);
-    }
+       printf("The answer is:%d",temp);
+}
