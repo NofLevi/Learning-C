@@ -2,23 +2,21 @@
 void main()
 {
     int a,temp;
-    LOOP:
     printf("Enter 1 positive number: ");
     scanf("%d",&a);
     temp = a;
     a = a - 1;
-    if (a>0)
+    do
     {
-    do {
-        temp = temp * a;
+        printf("why did u put negative number ?\nEnter 1 positive number:");
+        scanf("%d",a);
+    }
+    while(a<0);
+        do 
+    {
+         temp = temp * a;
         a--;
     }
-    while (a>0);
-    printf("the answer is:%d ",temp);
+    while(a>0);
+    printf("The answer is:%d",temp);
     }
-    else 
-    {
-    printf("Error: dont take negative numbers\n");
-    goto LOOP;
-    }
-}
