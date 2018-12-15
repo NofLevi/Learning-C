@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main()
+{
+	int a,b,count,sum = 0;
+	printf("Enter 2 numbers: ");
+	scanf("%d %d",&a,&b);
+	sum = a ;
+	for (count = b; count>1; count--)
+	{
+		sum = sum + a;
+	}
+	printf("The sum of %d times %d is:%d",a,b,sum);
+}
