@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main()
+{
+	int num,count,temp;
+	printf("Enter 1 integer: ");
+	scanf("%d",&num);
+	printf("the number divid by those numbers:");
+	for (count = num; count>=1; count--)
+	if (num % count == 0 )
+	{
+		printf("%d\n",count);
+	}
+}
