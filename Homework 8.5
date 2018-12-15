@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main()
+{
+	int a,b,count,end;
+	printf("Enter two ASCII numbers:");
+	scanf("%d %d",&a,&b);
+	if (a>b)
+	{
+		end = a - b;
+		for (count = 1; count <= end; count++)
+		printf("%c = %d\n",b,b);
+		b = b + 1;
+	}
+	else if (b>a)
+	{
+		end = b - a;
+		for (count = 1; count <= end; count++)
+		printf("%c = %d\n",b,b);
+		a = a + 1;
+	}
+	else
+	{
+		printf("%c = %d",a,a);
+	}
+}
