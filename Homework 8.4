@@ -1,11 +1,12 @@
 #include <stdio.h>
 void main()
 {
-    int num,gap,nums;
-    printf("1.Enter one integer 2. gap 3.how many numbers in the series");
+    int num,gap,nums,count;
+    printf("1.Enter the first integer:  2. gap:  3.how many numbers in the series" "");
     scanf("%d%d%d",&num,&gap,&nums);
-    
-    
-    
-    
+    for (count = 1; count<=nums; count++)
+    {
+    	printf("%d ",num);
+    	num = num + gap; 	
+	}   
 }
