@@ -1,0 +1,17 @@
+#include <stdio.h>
+void main()
+{
+int count,num,highest = 0,highestcount;
+for (count = 1; count<=8; count++)
+{
+	printf("Enter a number: ");
+	scanf("%d",&num);
+	if (num>highest)
+	{
+		highest = num;
+		highestcount = count;
+	}
+	
+}
+printf("The highest number is:%d\nthehighest number series number is:%d",highest,highestcount);
+}
