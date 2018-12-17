@@ -1,71 +1,21 @@
 #include <stdio.h>
 #include <conio.h>
-void main()
+int main()
 {
-	int count;
-	for (count = 0; count<=19; count++)
+	int count,end = 20;
+	LOOP:
+	for (count = count;count <= end; count++)
 	{
 		printf("%c = %d\n",count,count);
 	}
-	getch();
-
-	for (count = 21; count<=40; count++)
+	if (end<=255)
 	{
-		printf("%c = %d\n",count,count);
+	getch();
+	end = count + 19;
+	goto LOOP;
 	}
-	getch();
-	for (count = 41; count<=60; count++)
+	else 
 	{
-		printf("%c = %d\n",count,count);
-	}
-	getch();
-	for (count = 61; count<=80; count++)
-	{
-		printf("%c = %d\n",count,count);
-	}
-	getch();
-	for (count = 81; count<=100; count++)
-	{
-		printf("%c = %d\n",count,count);
-	}
-	getch();
-	for (count = 101; count<=120; count++)
-	{
-		printf("%c = %d\n",count,count);
-	}
-	getch();
-	for (count = 121; count<=140; count++)
-	{
-		printf("%c = %d\n",count,count);
-	}
-	getch();
-	for (count = 141; count<=160; count++)
-	{
-		printf("%c = %d\n",count,count);
-	}
-	getch();
-	for (count = 161; count<=180; count++)
-	{
-		printf("%c = %d\n",count,count);
-	}
-	getch();
-	for (count = 181; count<=200; count++)
-	{
-		printf("%c = %d\n",count,count);
-	}
-	getch();
-	for (count = 201; count<=220; count++)
-	{
-		printf("%c = %d\n",count,count);
-	}
-	getch();
-	for (count = 221; count<=240; count++)
-	{
-		printf("%c = %d\n",count,count);
-	}
-	getch();
-	for (count = 241; count<=255; count++)
-	{
-		printf("%c = %d\n",count,count);
+		return 0;
 	}
 }
