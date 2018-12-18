@@ -4,7 +4,7 @@ int main()
 {
 	int count,end = 20;
 	LOOP:
-	for (count = count;count <= end; count++)
+	for (count = count;count <= end && count<= 255; count++)
 	{
 		printf("%c = %d\n",count,count);
 	}
@@ -13,9 +13,5 @@ int main()
 	getch();
 	end = count + 19;
 	goto LOOP;
-	}
-	else 
-	{
-		return 0;
 	}
 }
