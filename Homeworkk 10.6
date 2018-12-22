@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main()
+{
+int rowCount;
+
+    printf("input your row count dawg: ");
+    scanf("%d",&rowCount);
+
+    //Start filling in the triangle
+    for(int i = 0; i < rowCount; i++)
+    {
+        //Move cursor
+        for(int y = 0; y < rowCount - i; y++)
+            printf(" ");
+
+        //Draw triangle lines
+        for(int y = 0; y <= i; y++)
+            printf("*");
+
+        printf("\n");
+    }
+}
