@@ -1,16 +1,17 @@
 #include <stdio.h>
 int main()
 {
-	int oreh,rohav;
+	int oreh,rohav,temprohav;
 	char tav;
 	printf("Enter 1 char and 2 ints");
-	scanf("%c%d%d",&tav,&oreh,&rohav);
+	scanf("%c %d %d",&tav,&oreh,&rohav);
 	for (oreh = oreh ;oreh >= 1;oreh--)
 	{
-	for (rohav = rohav;rohav >=1;rohav--)
+	for (temprohav = rohav;temprohav >=1;temprohav--)
 	{
 	printf("%c",tav);
 	}
 	printf("\n");
 	}
 }
+
