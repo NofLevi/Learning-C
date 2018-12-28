@@ -1,7 +1,7 @@
 #include <stdio.h>
 void main()
 {
-	int sum = 0,grades[10],i,avg;
+	int sum = 0,grades[10],i,avg,above = 0;
 	printf("Enter 10 grades of the students:\n ");
 	for (i = 0; i<10; i++)
 	{
@@ -10,12 +10,12 @@ void main()
 	}
 	avg=sum/10;
 	printf("the average score of the grade is: %d\n",avg);
-	printf("stuedent who pass the average are: ");
 	for(i;i>0;i--)
 	{
 		if (grades[i]>avg)
 		{
-			printf("%d ",i);
+		above+=1;	
 		}
 	}
+	printf("%d pass the avg",above);
 }
