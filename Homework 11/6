@@ -1,0 +1,26 @@
+#include <stdio.h>
+#define N 6
+int main()
+{
+	int i,arraya[N],arrayb[N],minus,sum=0;
+	printf("Enter %d Numbers: ",N);
+	for (i = 0; i < N; i++)
+	{
+		scanf("%d",&arraya[i]);
+	}
+	for (i = 0; i<N; i++)
+	{
+		sum += arraya[i];
+		arrayb[i] = sum;
+	}
+	printf("narah a ho:\n");
+	for (i = 0;i < N; i++ )
+	{
+		printf("%d ",arraya[i]);
+	}
+	printf("\nve marah b ho:\n");
+	for (i = 0; i<N; i++)
+	{
+		printf("%d ",arrayb[i]);
+	}
+}
