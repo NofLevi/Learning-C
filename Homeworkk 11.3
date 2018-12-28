@@ -1,0 +1,21 @@
+#include <stdio.h>
+void main()
+{
+	int sum = 0,grades[10],i,avg;
+	printf("Enter 10 grades of the students:\n ");
+	for (i = 0; i<10; i++)
+	{
+		scanf("%d",&grades[i]);
+		sum+=grades[i];		
+	}
+	avg=sum/10;
+	printf("the average score of the grade is: %d\n",avg);
+	printf("stuedent who pass the average are: ");
+	for(i;i>0;i--)
+	{
+		if (grades[i]>avg)
+		{
+			printf("%d ",i);
+		}
+	}
+}
