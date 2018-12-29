@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+int main()
+{
+	int i;
+	float num;
+	LOOP:
+	printf("Enter 1 number");
+	scanf("%f",&num);
+	printf("Options list:\n1.ereh mohlat\n2.shoresh riboi\n3.adpasa be hezka shlishit\n4.klitat mispar hadash\n5.quit\n");
+	scanf("%d",&i);
+	switch (i)
+	{
+		case(1):
+			{
+				if (num<0)
+				{
+					num = num*-1;
+				}
+				printf("ahereh amohlat ho: f",num);
+				break;
+			}
+		case(2):
+			{
+				if (num<0)
+				{
+					printf("your number is negative try again with positive number\n");
+					goto LOOP;
+					break;
+				}
+				else
+				{
+				printf("the square root of %f is %f",num,sqrt(num));
+				break;
+				}
+			}
+		case(3):
+			{
+				printf("%f ba shlishit =%f",num,(num*num)*num);
+			}
+		case(4)
+	}
+	
