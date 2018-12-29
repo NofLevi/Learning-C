@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main()
+{
+	int n,i,i2,temp,temp2,sum;
+	printf("Enter 1 a number: ");
+	scanf("%d",&n);
+	for (i = 1; i <= n; i++)
+	{
+		for (i2 = 0;i2 < i; i2++)
+		{
+		
+		sum = temp*temp;
+		}
+		printf("%d ",sum);
+	}
+}
