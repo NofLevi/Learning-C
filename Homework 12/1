@@ -1,0 +1,29 @@
+#include <stdio.h>
+int main() //mithalek rak be azmo ve 1
+{
+	int i,num,temp,prime = 3;
+	printf("Enter 1 integer: ");
+	scanf("%d",&num);
+	for (i = 2; i<=num; i++)
+	{
+		temp = num;
+		if ((temp%i==0)&& (i!=1) && (i != num))
+		{
+			prime = 0;
+		}
+	}
+	if (prime != 0)
+	{
+		prime = 1;
+	}
+	switch (prime)
+	{
+		case (0):
+			printf("%d isnt a prime number",num);
+			break;
+			
+		case (1):
+		printf("%d is a prime number",num);
+		break;
+	}
+}
