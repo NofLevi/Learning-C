@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <conio.h>
 #include <math.h>
+#include <stdlib.h>
 int main()
 {
 	int i;
 	float num;
 	LOOP:
+	system("cls");
 	printf("Enter 1 number");
 	scanf("%f",&num);
 	printf("Options list:\n1.ereh mohlat\n2.shoresh riboi\n3.adpasa be hezka shlishit\n4.klitat mispar hadash\n5.quit\n");
@@ -38,7 +40,24 @@ int main()
 		case(3):
 			{
 				printf("%f ba shlishit =%f",num,(num*num)*num);
+				break;
 			}
-		case(4)
-	}
-	
+		case(4):
+			{
+				printf("You asked to put a new number go ahead\n");
+				goto LOOP;
+				break;
+			}
+		case(5):
+			{
+				printf("You asked to leave the program so have a good day and cya later\n");
+				return 0;
+			}
+		default:
+			{
+				printf("what are u doing i gave u specific options. try again and put 1 number from the list");
+				goto LOOP;
+				break;
+			}
+	}		
+}
