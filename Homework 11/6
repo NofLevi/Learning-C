@@ -24,3 +24,8 @@ int main()
 		printf("%d ",arrayb[i]);
 	}
 }
+// Class
+b[0}=a[0]
+for(i=1; i<N;i++)
+b[i] = b[i-1] + a[i];
+//
