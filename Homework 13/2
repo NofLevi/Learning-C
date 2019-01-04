@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <string.h>
+void main()
+{
+    char str1[20]="CheckCheck";
+    char str2[20];
+    strcat (str2,str1);
+    printf("%s",str2);
+    
+}
