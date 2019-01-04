@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+void main()
+{
+    int x,i;
+    char test[20];
+    printf("Enter Your Name: ");
+    gets(test);
+    x = strlen(test);
+    for(i = 0; i<x;i++)
+    {
+        puts(test);
+    }
+    
+}
