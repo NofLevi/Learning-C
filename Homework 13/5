@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+	char str1[10],tav,i;
+	int count=0;
+	printf("Enter a char:");
+	scanf("%c",&tav);
+	printf("Enter a string: ");
+	scanf("%s",str1);
+	for(i = 0;i<10;i++)
+	{
+		if (str1[i]==tav)
+		{
+		count+=1;	
+		}
+	}
+	printf("%c mofia %d peamim be ",tav,count);
+	puts (str1)	;
+}
