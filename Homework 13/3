@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+void main()
+{
+    char str1[10];
+    char str2[10];
+    char str3[20];
+    char strtemp[2] =" ";
+    printf("Enter your name: ");
+    scanf("%s",str1);
+    printf("Enter your last name: ");
+    scanf("%s",str2);
+    strcpy(str3,str1);
+    strcat(str3,strtemp);
+    strcat(str3,str2);
+    puts(str3);
+}
