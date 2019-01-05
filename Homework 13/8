@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+char str1[30],temp;
+int i,i2,count[30],x=0,max;
+	printf("Enter a string: ");
+	gets(str1);
+	max = strlen(str1);
+	for(i=0;i<=max;i++)
+	{
+		if (str1[i]>=97 && str1[i]<=122)
+		{
+		str1[i]= str1[i] - 32;
+		}
+	}
+	for(i=0;i<max;i++)
+	{
+		x = 0;
+		temp=str1[i];
+		for(i2=0;i2<max;i2++)
+		{
+			if(str1[i]==str1[i2])
+			{
+			x= x + 1;
+			}	
+		}
+
+		
+		printf("%c    =     %d\n",temp,x);		
+	}
+}
