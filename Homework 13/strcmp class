@@ -8,7 +8,7 @@ int main ()
 	gets(str1);
 	for(i=0;i<10;i++)
 	{
-		printf("%d string too compare: ",count);
+		printf("%d. string too compare: ",count);
 		gets(strtemp);
 		index = strcmp(str1,strtemp);
 		if(index>0)
@@ -25,6 +25,6 @@ int main ()
 		}
 		count +=1;
 	}
-	printf("there is %d higher strings. %d lower strings. and %d equal strings",countpositive,countnegative,countequal);
+	printf("there is %d higher strings.\n %d lower strings.\n and %d equal strings",countpositive,countnegative,countequal);
 	
 }
