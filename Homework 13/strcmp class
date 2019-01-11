@@ -25,6 +25,6 @@ int main ()
 		}
 		count +=1;
 	}
-	printf("there is %d higher strings.\n %d lower strings.\n and %d equal strings",countpositive,countnegative,countequal);
+	printf("there is %d higher strings.\n%d lower strings.\nand %d equal strings",countpositive,countnegative,countequal);
 	
 }
