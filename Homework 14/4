@@ -2,29 +2,23 @@
 #include <string.h>
 int main()
 {
-    char str[20],tempchar;
-    int i,x,temp;
+    char str[20];
+    int i,array[20],max;
     LOOP:
     printf("Enter a number: ");
     gets(str);
-    x = strlen(str);
-    for (i=0;i<=x;i++)
-    {    
-        tempchar = str[i];
-        temp = tempchar;
-        printf("%d",temp);
-        if ((temp>=48)&&(temp<=57))
-        {
-        str[i] = str[i] - 48;
-        }
-        else
-        {
-        printf("Error: dont put a letters or symbols in it only numbers\n");
-        goto LOOP;
-        }
-    }
-    for (i=0;i<x;i++)
+    max = strlen(str);
+    for (i=0;i<max;i++)
     {
-        printf("%d",str[i]);
-    }
-}
+    array[i]= str[i];
+    if ((array[i]<48) && (array[i]>57))
+    {
+    	printf("You asked to put a number. Try again\n");
+    	goto LOOP;
+	}
+	else
+	{
+		printf("%d",array[i]-48);
+	}
+	}
+}    
