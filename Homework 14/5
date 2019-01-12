@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+	int num,i,max,opposite;
+	char str[20],str2[20];
+	printf("Enter a numbers: ");
+	scanf("%d",&num);
+	for(i=0;i<20;i++) //int into string oppositly//
+	{
+		str[i] = num % 10;
+		num / 10;
+	}
+	max = strlen(str);
+	opposite = max;
+	for (i=0; i<=max;i++) // switch it from opposite too normal//
+	{
+		str2[i] = str[opposite-1];
+		opposite --;
+		printf("%c",str2[i]+48);
+	}	
+}
