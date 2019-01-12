@@ -20,3 +20,26 @@ int main()
 		printf("%c",str2[i]+48);
 	}	
 }
+#include <stdio.h>
+#include <string.h>
+void main()
+{
+	int num,i,tempnum,counter=1;
+	char str[20],str2[20],tempchar;
+	printf("Enter a numbers: ");
+	scanf("%d",&num);
+	tempnum=num;
+	while(tempnum>=10)
+	{
+		counter+=1;
+		tempnum = tempnum / 10;
+	}
+	for(i=0;i<counter;i++) //int into string oppositly//
+	{   
+	    tempchar = (num % 10) + 48;
+		str[i] = tempchar;
+		num / 100;
+	}
+    puts(str);
+}
+
