@@ -2,29 +2,7 @@
 #include <string.h>
 int main()
 {
-	int num,i,max,opposite;
-	char str[20],str2[20];
-	printf("Enter a numbers: ");
-	scanf("%d",&num);
-	for(i=0;i<20;i++) //int into string oppositly//
-	{
-		str[i] = num % 10;
-		num / 10;
-	}
-	max = strlen(str);
-	opposite = max;
-	for (i=0; i<=max;i++) // switch it from opposite too normal//
-	{
-		str2[i] = str[opposite-1];
-		opposite --;
-		printf("%c",str2[i]+48);
-	}	
-}
-#include <stdio.h>
-#include <string.h>
-void main()
-{
-	int num,i,tempnum,counter=1;
+	int num,i,tempnum,counter=1,max;
 	char str[20],str2[20],tempchar;
 	printf("Enter a numbers: ");
 	scanf("%d",&num);
@@ -38,8 +16,13 @@ void main()
 	{   
 	    tempchar = (num % 10) + 48;
 		str[i] = tempchar;
-		num / 100;
+		num = num / 10;
 	}
-    puts(str);
+	max = counter;
+	for (i=0; i<counter;i++) // switch it from opposite too normal//
+	{
+		str2[i] = str[max-1];
+		max --;
+		printf("%c",str2[i]);
+	}	
 }
-
