@@ -32,7 +32,7 @@ int main()
 	
 	for(i=0;i<=spacesspot[longestword;i++])//make the letters bigger [CHECK]// 
 	{	
-		for(i2=0;i2<5;i++)//longestword = 0 scenario//
+		for(i2=0;i2<5;i2++)//longestword = 0 scenario//
 		{
 			if(str[i]=big[i2])
 			{
@@ -43,10 +43,9 @@ int main()
 	}
 	else if (longestword>0)
 	{
-			
+			for(i=longestword)
 	}
 	
 }
-
 
 
