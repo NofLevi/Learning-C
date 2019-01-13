@@ -27,9 +27,10 @@ int main()
 			longestword=i;
 		}
 	}
+	
 	for(i=0;i<=max;i++) //make the letters bigger [CHECK]//
 	{
-		if (str[i]>)
+		if (str[spacespot[longestword]])
 	}
 	
 }
