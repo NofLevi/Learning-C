@@ -12,17 +12,19 @@ int main()
 		count = count + 1;
 		if(str[i]==(' ') || str[i] == str[max])
 		{
-			words[spaces]= count;
+			words[spaces]= count - 1;
 			spaces= spaces + 1;;
 			count = 0;
 		}
 	}
-	for (i=0;i<spaces;i++) //which 1 is the biggest//
+	for (i=0;i<=spaces;i++) //which 1 is the biggest//
 	{
 		if (words[i]>biggest)
-		{
+		{	
+			biggest = words[i];
 			longestword=i;
 		}
 	}
 	printf("%d",longestword);
 }
+
