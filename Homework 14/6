@@ -41,6 +41,12 @@ int main()
 		}
 	}
 	}
+	else if (longestword>0)
+	{
+			
+	}
 	
 }
+
+
 
