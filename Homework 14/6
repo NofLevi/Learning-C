@@ -1,0 +1,21 @@
+#include <stdio.h>,l
+#include <string.h>
+int main()
+{
+	char str[40],str2[40];
+	int i,i2=0,max,words[6],count=0;
+	puts("Enter a string");
+	gets(str);
+	str2[0]=' ';
+	strcat(str,str2);
+	max = strlen(str2);
+	for(i=0;i<max;i++)//which word is the biggest//
+	{
+		count+=1;
+		if(str[i]=' ')
+		{
+			words[i2]= count;
+			i2+=1;
+			count = 0;
+		}
+	}
