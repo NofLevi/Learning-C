@@ -2,20 +2,27 @@
 #include <string.h>
 int main()
 {
-	char str[40],str2[40];
-	int i,i2=0,max,words[6],count=0;
+	char str[40];
+	int i,i2=0,max,words[6],count=0,biggest=0,longestword = 0,spaces=0;//spaces also number of words//
 	puts("Enter a string");
 	gets(str);
-	str2[0]=' ';
-	strcat(str,str2);
-	max = strlen(str2);
-	for(i=0;i<max;i++)//which word is the biggest//
+	max = strlen(str);
+	for(i=0;i<max;i++)//counting letters//
 	{
-		count+=1;
-		if(str[i]=' ')
+		count = count + 1;
+		if(str[i]==(' ') || str[i] == str[max])
 		{
-			words[i2]= count;
-			i2+=1;
+			words[spaces]= count;
+			spaces= spaces + 1;;
 			count = 0;
 		}
 	}
+	for (i=0;i<spaces;i++) //which 1 is the biggest//
+	{
+		if (words[i]>biggest)
+		{
+			longestword=i;
+		}
+	}
+	printf("%d",longestword);
+}
