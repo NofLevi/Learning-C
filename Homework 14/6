@@ -2,7 +2,7 @@
 #include <string.h>
 int main()
 {
-	char str[40],big[5]="AEIOU";
+	char str[40],big[6]={'A','E','I','O','U','\0'};
 	int i,i2=0,max,words[6],count=0,biggest=0,longestword = 0,spaces=0,spacespot[6];//spaces also number of words// [WORK]
 	puts("Enter a string");
 	gets(str);
@@ -30,7 +30,7 @@ int main()
 	if (longestword=0);
 	{
 	
-	for(i=0;i<=spacesspot[longestword;i++])//make the letters bigger [CHECK]// 
+	for(i=0;i<spacespot[longestword];i++)  //make the letters bigger [CHECK]// 
 	{	
 		for(i2=0;i2<5;i2++)//longestword = 0 scenario//
 		{
@@ -41,11 +41,10 @@ int main()
 		}
 	}
 	}
-	else if (longestword>0)
+	//else if (longestword>0)
 	{
-			for(i=longestword)
+	//	for(i=spacespot[longestword];lo)
 	}
-	
+	puts(str);
 }
-
 
