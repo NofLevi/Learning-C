@@ -26,33 +26,14 @@ int main()
 			biggest = words[i];
 			longestword=i;
 		}
-	}	
-	switch (longestword)
+	}
+	for(i=spacespot[longestword];str[i]!=' ' || str[i] != 0;i--)
 	{
-		case(0):
-		for(i=0;i<spacespot[longestword];i++)  //make the letters bigger if the longest is first [WORK]// 
-		{	
 		if (str[i] == 'a' || str[i] == 'u' || str[i] == 'i' || str[i] == 'o' || str[i] == 'e')
 		{
 			str[i]= str[i] - 32;
-		}	
 		}
-		break;
 	}
-		case(1 || 2):
-		{
-			for(i= -1 + spacespot[longestword];str[i]!=' ';i--)
-			{
-			if (str[i] == 'a' || str[i] == 'u' || str[i] == 'i' || str[i] == 'o' || str[i] == 'e')
-			{
-				str[i]= str[i] - 32;
-			}
-			}
-			break;
-		}
-
-
 	puts(str);
 }
-
 
