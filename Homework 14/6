@@ -27,7 +27,7 @@ int main()
 			longestword=i;
 		}
 	}
-	for(i=spacespot[longestword];str[i]!=' ' || str[i] != 0;i--)
+	for(i=spacespot[longestword] - 1;str[i]!=' ';i--)
 	{
 		if (str[i] == 'a' || str[i] == 'u' || str[i] == 'i' || str[i] == 'o' || str[i] == 'e')
 		{
@@ -36,4 +36,3 @@ int main()
 	}
 	puts(str);
 }
-
