@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include <conio.h>
+#include <stdlib.h>
+int main()
+{
+	char str[20],str2[20],tav;
+	int i,i2=0,max,max2,tempi;
+	puts("Enter a char: ");
+	tav = getche();
+	puts("Enter a String: ");
+	gets (str);
+	max = strlen(str);
+	for (i=0;i<max;i++)
+	{
+		str2[i2]=str[i];
+		i2++;
+		if(str[i]==tav)
+		{	
+		str2[i2]=str[i];
+		i2++;	
+		}
+	}
+	puts(str2);	
+}
