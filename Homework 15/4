@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main()
+{
+	int i,j,k=0,met[5][4] = {{1,2,3,4},{5,6,7,8},{1,2,3,4},{1,2,3,4},{5,6,7,8}},array[5] = {00};
+	for(i=0;i<5;i++)
+	{
+		
+		for (j=0;j<4;j++) // work
+		{
+			array[k]+= met[i][j];
+		}
+		k+=1;
+	}		  
+	for(i=0;i<5;i++) //work 
+	{
+		printf("%d ",array[i]);
+	}
+}
