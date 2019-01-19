@@ -1,0 +1,32 @@
+#include <stdio.h>
+int main()
+{
+	int i,count=0,num,array[20] = {0,0,0,1,0,0,1,1,0,0,0,0,0,1,1,0,0,0,0,0},spot;
+	printf("Enter a number of freedays needed: "); //asking for number of freedays [work]
+	scanf("%d",&num);
+	for(i=0;i<20;i++)//searching for freedays [work]
+	{
+		if(array[i]==0)
+		{
+			count+=1;
+			if(count==num)
+			{
+				spot = i;
+				goto OUTSIDE;
+			}
+		}
+		else
+		{
+			count = 0;
+		}
+	}
+	OUTSIDE:
+	for(i=spot;array[i]!=1;i--)//switching the numbers 
+	{
+		array[i] = 1;
+	}
+	for(i=0;i<20;i++)//printing
+	{
+		printf("%d",array[i]);
+	}
+}
