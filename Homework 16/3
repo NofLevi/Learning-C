@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main()
+{
+	int i,j,met[3][5]={{13,4,0,1,3},{2,9,5,2,7},{11,0,1,4,8}};
+	for (i=0;i<3;i++)
+	{
+		for(j=0;j<5;j++)
+		{
+			printf("%d ",met[i][j]);
+		}
+		printf("\n");
+	}
+	printf("\n\n");
+	for(j=0;j<5;j++)
+	{
+		for(i=0;i<3;i++)
+		{
+			printf("%d ",met[i][j]);
+		}
+		printf("\n");
+		
+	}
+}
