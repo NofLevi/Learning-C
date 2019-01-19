@@ -14,7 +14,7 @@ int main()
 			}
 		}
 	}
-	if(confirmation>0)
+	if(confirmation>0)//choosing if there is similarities or not [WORK]
 	{
 		printf("There are similarities in the numbers:\n ");
 		for(i=0;i<5;i++)
