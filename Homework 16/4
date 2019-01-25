@@ -1,24 +1,21 @@
 #include <stdio.h>
 int main()
 {
-	int i,met[4][4]={{1,2,3,4},{5,6,7,8},{9,1,2,3},{4,5,6,7}},sum1=0,sum2=0;
-	for(i=0;i<4;i++)
+	int i,met[4][4]={{1,2,3,4},{5,6,7,8},{9,1,2,3},{4,5,6,7}},suml=0,sumr=0;
+	for(i=0;i<5;i++)
 	{
-		sum1+=met[i][i];		
+		suml+=mat[i][j];
+		sumr+=mat[i][4-i];
 	}
-	for(i=4;i>0;i--)
-	{
-		sum2+=met[i][i];
-	}
-	if(sum1>sum2)
+	if(suml>sumr)
 	{
 		printf("alahson smol le yamin gadol yoter");
 	}
-	else if(sum2>sum1)
+	else if(sumr>suml)
 	{
 		printf("alahson yamin le smol gadol yoter");
 	}
-	else if(sum1=sum2)
+	else if(sumr=suml)
 	{
 		printf("aalahsonim shavim");
 	}
