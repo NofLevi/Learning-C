@@ -8,7 +8,7 @@ int main()
 		{
 			if(array[i]==array[j]&& i !=j)
 			{
-				similarities[k] = i;
+				similarities[k] = array[i];
 				confirmation+=1;
 				k+=1;
 			}
