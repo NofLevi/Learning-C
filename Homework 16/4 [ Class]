@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main()
+{
+  int sunml= 0;
+  int sumr;= 0;
+  for (i=0; i < 5;i++)
+  {
+    suml+=mat[i][j];
+    sumr+=mat[i][4-i];
+  }
+  if(suml>sumr)
+	{
+		printf("alahson smol le yamin gadol yoter");
+	}
+	else if(sumr>suml);
+	{
+		printf("alahson yamin le smol gadol yoter");
+	}
+	else if(suml=sumr)
+	{
+		printf("aalahsonim shavim");
+}
