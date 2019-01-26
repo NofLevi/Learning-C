@@ -1,9 +1,10 @@
 #include <stdio.h>
 int main()
 {
-	int met[7][7]={{1,0,8,2,13,2,14},{8,0,1,6,7,1},{3,1,5,8,2,3},{5,4,9,6,1,7},{3,1,5,4,9,6},{1,3,7,8,1,0},{1,2,3,4,5,6,7}};//met int
+	int met[7][7]={{1,0,8,2,13,2,14},{8,0,1,6,7,1,5},{3,1,5,8,2,3,5},{5,4,9,6,1,7,4},{3,1,5,4,9,6,9},{1,3,7,8,1,0,8},{1,2,3,4,5,6,7}};//met int
 	int i,j;//temp variables
-	int kodkod[4][2];//kodkodim
+	int kodkod[2][2];//kodkodim
+	
 	for(i=0;i<7;i++)//just showing the met before changing her [WORK]
 	{
 		for(j=0;j<7;j++)
@@ -15,10 +16,33 @@ int main()
 	printf("\n\n\n\n");
 	
 	
-	
-	printf("Enter the first cordination[x then y]]: ");
+	//taking corners from the user [work]
+	printf("Enter the first cordination[y then x]]: ");
 	scanf("%d%d",&kodkod[0][0],&kodkod[0][1]);
-	printf("Enter the second cordination [x then y]: ");
-	scanf("%d%d",&kodkod[1][0],&kodkod[1]);
-}
+	printf("Enter the second cordination [y then x]: ");
+	scanf("%d%d",&kodkod[1][0],&kodkod[1][1]);
 	
+	if(kodkod[0][1]<kodkod[1][1])
+	{
+		for(i=kodkod[0][0];i<=kodkod[1][0];i++)
+		{
+			for(j=kodkod[0][1];j<=kodkod[1][1];j++)
+			{
+				if((i!=kodkod[0][0]&& j!=kodkod[0][1])&&(i!=kodkod[1][0]&& j!=kodkod[1][1]))
+				{
+					met[i][j]= 0 ;
+				}
+			}
+		}
+	}
+	for(i=0;i<7;i++)//just showing the met before changing her [WORK]
+	{
+	for(j=0;j<7;j++)
+		{
+			printf("%d ",met[i][j]);
+		}
+		printf("\n");
+	}
+	
+	
+}
