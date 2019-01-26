@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main()
+{
+	int met[6][6]={{6,3,2,2,3,0},{5,4,9,6,7,1},{3,1,5,8,2,3},{5,4,9,6,1,7},{3,1,5,4,9,6},{1,3,7,8,1,0}};
+	int i=6,j=5,sum=0,temp;
+	for(temp=0;temp<5;temp++)
+	{
+		sum+=met[i][j];
+		j-=7;
+	}
+	printf("the sum is: ",sum);
+}
+	
