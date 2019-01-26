@@ -36,9 +36,9 @@ int main()
 	}
 	else
 	{
-		for(i=kodkod[0][0];i<=kodkod[1][0];i++)
+		for(i=kodkod[1][0];i<=kodkod[0][0];i++)
 		{
-			for(j=kodkod[0][1];j<=kodkod[1][1];j++)
+			for(j=kodkod[1][1];j<=kodkod[0][1];j++)
 			{
 				{
 					met[i][j]= 0 ;
