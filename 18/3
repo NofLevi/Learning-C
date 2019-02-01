@@ -1,0 +1,30 @@
+#include <stdio.h>
+int power(int x,int y)
+{
+	int i,temp;
+	if (y==0)
+	{
+	return 1;
+	}
+	else if (y==1)
+	{
+	return x;
+	}
+	else if(y>1)
+	{
+	temp = x;
+	for (i=2;i<=y;i++)
+	{
+		x = x*temp;
+	}
+	return x;
+	}	
+}
+int main()
+{
+	int x,y,sum;
+	printf("Enter 2 integers: ");
+	scanf("%d %d",&x,&y);
+	sum = power(x,y);
+	printf("%d",sum);
+}
