@@ -1,0 +1,12 @@
+#include <stdio.h>
+int pitagoras(int a,int b)//pitagoras function
+{
+	return ((a*a)+(b*b))*((a*a)+(b*b));
+}
+int main()
+{
+	int a,b;
+	printf("Enter nitzav a and nitzav b: ");
+	scanf("%d %d",&a,&b);
+	printf("%d",pitagoras(a,b));
+}
