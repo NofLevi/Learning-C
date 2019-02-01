@@ -1,0 +1,24 @@
+#include <stdio.h>
+int truefalse(int x,int y)
+{
+	if (x%y==0)
+	{
+		return 1;
+	}
+	else 
+	{
+		return 0;
+	}
+}
+int main()
+{
+	int x,y,value;
+	printf("Enter 2 integers: ");
+	scanf("%d %d",&x,&y);
+	value = truefalse(x,y);
+	if(value == 1)
+	printf("true statement");
+	else 
+	printf("false statement");
+	
+}
