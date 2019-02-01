@@ -1,0 +1,21 @@
+#include <stdio.h>
+int loahakefel(int x)
+{
+	int i,j;
+	for(i=1;i<=x;i++)
+	{
+		for(j=1;j<=x;j++)
+		{
+			printf("%d ",i*j);
+		}
+		printf("\n");
+	}	
+}
+int main()
+{
+	int x;
+	printf("Enter a integer: ");
+	scanf("%d",&x);
+	loahakefel(x);
+}
+
