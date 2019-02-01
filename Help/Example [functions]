@@ -16,5 +16,8 @@ int x,y,z;
 printf("Enter 2 numbers: ");
 scanf("%d %d",&x,&y);
 z = equal(x,y);
-printf("%d",z);
+if (z==1)
+printf("the numbers are equals");
+else
+printf("the numbers are not equal");
 }
