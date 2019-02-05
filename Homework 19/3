@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <conio.h>
+int func(int array[5][5],int num)
+{
+	int i,j,trueorfalse=0;
+	for(i=0;i<5;i++)
+	{
+		for(j=0;j<5;j++)
+		{
+			if(array [i][j]== num)
+			trueorfalse = 1;
+		}
+	}
+	return trueorfalse;
+}
+int main()
+{
+	int num,array[5][5],i,j,trueorfalse;
+	printf("Enter a integer: ");
+	scanf("%d",&num);
+	printf("Enter 25 numbers for the multi dimmensional array: ");
+	for(i=0;i<5;i++)
+	{
+		for(j=0;j<5;j++)
+		{
+			scanf("%d",&array[i][j]);
+		}
+	}
+	trueorfalse = func(array,num);
+	switch(trueorfalse)
+	{
+		case(1):
+		printf("the statement is true");
+		break;
+		case(0):
+		printf("the statement is false");
+		break;
+	}
+}
