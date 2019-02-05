@@ -1,0 +1,36 @@
+#include <stdio.h>
+int func(int array[],int length) // double the array
+	{
+	int i;
+	for(i=0;i<length;i++)
+	{
+		array[i]*=2;
+	}
+	}
+int func2(int num) //double the integer
+{
+	num = num*2;
+}
+int main() //input and output
+{
+	int length,i;
+	printf("Enter the length of the array: ");
+	scanf("%d",&length);
+	int array[length],num;
+	printf("Enter the array: ");
+	for (i=0;i<length;i++)
+	{
+		scanf("%d",&array[i]);	
+	}
+	printf("Enter a integer");
+	scanf("%d",&num);
+	func(array,length);
+	printf(" The new array is: ");
+	for(i=0;i<length;i++)
+	{
+		printf("%d",array[i]);
+	}
+	func2(num);
+	printf("\nand the intger doubled is: %d",num);
+	
+}
