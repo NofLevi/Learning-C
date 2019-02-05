@@ -30,7 +30,7 @@ int check(int array[N][N])
 	temp=0;
 	for(i=0;i<N;i++)
 	{
-		temp+=array[i][3-i];
+		temp+=array[i][2-i];
 	}
 	if(temp!=sum)
 	flag+=1;
@@ -48,5 +48,8 @@ int main()
 		}
 	}
 	value = check(array);
-	printf("%d",value);
+	if(value>0)
+			printf("the numbers u gave didnt make the magic squere");
+	else 
+	printf("MAGIC SQUERE IS REAL!!!");
 }
