@@ -34,6 +34,7 @@ int check(int array[N][N])
 	}
 	if(temp!=sum)
 	flag+=1;
+	return flag;
 }
 int main()
 {
