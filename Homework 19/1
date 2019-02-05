@@ -1,0 +1,26 @@
+#include <stdio.h>
+int count(int array[],int length,int mispar)
+{
+	int i,count=0;
+	for(i=0;i<length;i++)
+	{
+		if (array[i] == mispar)
+		count++;
+	}
+	return count;
+}
+int main()
+{
+	int mispar,length,i;
+	printf("Enter the length of the array: ");
+	scanf("%d",&length);
+	int array[length];
+	printf("Enter the array: ");
+	for(i=0;i<length;i++)
+	{
+		scanf("%d",&array[i]);
+	}
+	printf("\nenter a integer: ");
+	scanf("%d",&mispar);
+	printf("\n%d",count(array,length,mispar));
+}
