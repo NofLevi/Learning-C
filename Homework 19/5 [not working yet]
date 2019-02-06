@@ -9,6 +9,15 @@ int func1(char str[])//function replacing strlen
 	}
 	return x;
 }
+int func2(char str[],char newstr[])//function replacing strcpy
+{
+	int i;
+	for(i=0;str[i];i++)
+	{
+		newstr[i]=str[i];
+	}
+	puts(newstr);
+}
 int main()
 {
 	char str[50];
@@ -16,12 +25,25 @@ int main()
 	printf("Options:\n1.strlen\n2.strcpy\n3.strcar\n4.strcmp\n");
 	scanf("%d",&option);
 	printf("Enter a string: ");
-	flushall();
 	gets(str);
 	switch (option)
 	{
-	case(1):
-	printf("\nThe length of the string is: %d",func1(str));
-	break;
+		case(1)://case for strlen
+		printf("\nThe length of the string is: %d",func1(str));
+		break;
+		
+		case(2)://case for strcpy
+		char newstr[0];
+		func2(str,newstr);
+		break;
+		
+		case(3):// case for strcat
+		int newstr2[50]
+		printf("Enter a second string to strcat");
+		gets(newstr2);
+		func3(str,newstr2);
+		
+		
 	}
+
 }
