@@ -9,7 +9,7 @@ int func1(char str[])//function replacing strlen
 	}
 	return x;
 }
-int func2(char str[],char newstr[])//function replacing strcpy
+char func2(char str[],char newstr[])//function replacing strcpy
 {
 	int i;
 	for(i=0;str[i];i++)
@@ -17,6 +17,20 @@ int func2(char str[],char newstr[])//function replacing strcpy
 		newstr[i]=str[i];
 	}
 	puts(newstr);
+}
+char func3(char str[],char newstr2[],char strcombine[])//replacing strcat
+{
+	int i,j=0;
+	for(i=0;str[i];i++)
+	{
+		strcombine[i] = str[i];
+	}
+	i+=1;
+	for[i;newstr2[i];i++]
+	{
+		strcombine[i]=newstr2[j];
+		j++;
+	}
 }
 int main()
 {
@@ -38,12 +52,12 @@ int main()
 		break;
 		
 		case(3):// case for strcat
-		int newstr2[50]
+		int newstr2[50],strcombine[100];
 		printf("Enter a second string to strcat");
 		gets(newstr2);
-		func3(str,newstr2);
-		
-		
+		func3(str,newstr2,strcombine);
+		printf("the new string is: ");
+		puts(strcombine);	
 	}
 
 }
