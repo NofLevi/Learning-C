@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <conio.h>
+int func1(char str[])//function replacing strlen
+{
+	int i,x;
+	for(i=0;str[i];i++)
+	{
+		x++;
+	}
+	return x;
+}
+int main()
+{
+	char str[50];
+	int option;
+	printf("Options:\n1.strlen\n2.strcpy\n3.strcar\n4.strcmp\n");
+	scanf("%d",&option);
+	printf("Enter a string: ");
+	flushall();
+	gets(str);
+	switch (option)
+	{
+	case(1):
+	printf("\nThe length of the string is: %d",func1(str));
+	break;
+	}
+}
