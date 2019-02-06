@@ -32,6 +32,25 @@ char func3(char str[],char newstr2[],char strcombine[])//replacing strcat
 		j++;
 	}
 }
+int func4(char str,char newstr3)//replacing strcmp
+{
+	for(i=0;str[i] || newstr3[i];i++)
+	{
+		int i,flag=0;
+		if(str[i]!=newstr3[i])
+		{
+			if(str[i]>newstr3[i])
+			{
+				return -1;
+			}
+			else
+			{
+				return 1;
+			}
+		}
+	}
+	return 0;
+}
 int main()
 {
 	char str[50];
@@ -58,6 +77,26 @@ int main()
 		func3(str,newstr2,strcombine);
 		printf("the new string is: ");
 		puts(strcombine);	
+		break;
+		
+		case(4)://case for strcmp
+		int newstr3[50],value;
+		printf("Enter a string to compare");
+		gets(newstr[50]);
+		value = func4(str,newstr3);
+		switch(value)
+		{
+			case(-1):
+			printf("the first 1 is bigger in alphabetic");
+			break;
+			case(0):
+			printf("the strings are equal");
+			break;
+			case(1):
+			printf("the second string is bigger in alphabetical");
+			break;
+		}
+		
 	}
 
 }
