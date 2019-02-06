@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main()
+{
+int array[5][2]={{2777,88},{3434,79},{1181,94},{5555,82},{0,0}};
+int i,j,highest=0,highestspot;
+for (i=0;i<5;i++)
+{
+	if(array[i][1]>highest)
+	{
+		highest = array[i][1];
+		highestspot = i;
+	}
+}
+printf("the student with the highest grades is %d with the average of: %d",array[highestspot][0],highest);
+}
+
