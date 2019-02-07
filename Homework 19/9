@@ -1,0 +1,32 @@
+#include <stdio.h>
+int main()
+{
+	int metrics[5][5]={{1,1,1,1,1},{1,1,1,2,1},{3,3,3,2,2},{2,1,1,1,4},{2,2,8,7,6}},howmanytimes[25] = {0},numberofvalue[25]={0};
+	int i,j,k=0,value=0,highest=0;
+	for(i=0;i<5;i++)
+	{
+		for(j=0;j<5;j++)
+		{
+			for(k=0;k<25;k++)
+			{
+				if (metrics[i][j]==numberofvalue[k])
+				{
+					howmanytimes[k]+=1;
+					numberofvalue[k]=metrics[i][j];
+				}
+				else if(metrics[i][j]!=numberofvalue[k] && numberofvalue[k]==0)
+				{
+					numberofvalue[k]=metrics[i][j];
+				}
+			}
+		}
+	}
+	for(i=0;i<25;i++)
+	{
+		if(howmanytimes[i]>highest)
+		{
+			highest=howmanytimes[i];
+		}
+	}
+	printf(" the number is :%d",numberofvalue[highest]);
+}
