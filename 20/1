@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main()
+	{
+		float x;
+		printf("Enter a number: ");
+		scanf("%f",&x);
+		printf("x value:%f\t x adress:%p\n",x,&x);
+		float *xptr=&x;
+		*xptr*=10;
+		printf("%f",*xptr);
+	}
