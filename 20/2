@@ -1,0 +1,22 @@
+#include <stdio.h>
+int func1(int a)
+{
+	a=a*a;
+	return a;
+}
+int func2(int *ptrb)
+{
+	*ptrb*=*ptrb;
+	return *ptrb;
+}
+int main()
+{
+	int a,b;
+	printf("enter 2 numbers: ");
+	scanf("%d%d",&a,&b);
+	int *ptrb =&b;
+	func1(a);
+	func2(ptrb);
+	printf("%d\t%d",a,b);
+	
+}
