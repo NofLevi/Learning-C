@@ -1,0 +1,15 @@
+#include <stdio.h>
+void func(char *pch)
+{
+	if(*pch>96)
+	*pch-=32;
+}
+int main()
+{
+	char ch;
+	printf("Enter a char: ");
+	scanf("%c",&ch);
+	char*pch =&ch;
+	func(pch);
+	printf("%c",ch);
+}
