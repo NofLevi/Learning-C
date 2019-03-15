@@ -1,0 +1,28 @@
+#include <stdio.h>
+void swap(int *a,int *b)
+{
+    int temp;
+    *a=temp;
+    *a=*b;
+    *b=temp;
+}
+void bigtosmall(int *parr)
+{
+    int i,j;
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            if(i!=j && parr[i]>parr[j])
+            swap(&parr[i],&parr[j]);
+        }
+    }
+}
+int main()
+{
+    int arr[3]={1,2,3};
+    int *parr=arr;
+    printf("%d %d %d\n",arr[0],arr[1],arr[2]);
+    bigtosmall(parr);
+    printf("%d %d %d",arr[0],arr[1],arr[2]);
+}
