@@ -23,7 +23,7 @@ void bigtosmall(int *parray)
 }
 int main()
 {
-    int array[3]={1,2,3};
+    int array[3]={2,1,3};
     int *parray=&array[0];
     printf("%d %d %d\n",array[0],array[1],array[2]);
     bigtosmall(parray);
