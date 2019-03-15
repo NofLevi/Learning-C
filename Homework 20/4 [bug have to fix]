@@ -1,28 +1,31 @@
 #include <stdio.h>
 void swap(int *a,int *b)
 {
-    int temp;
-    *a=temp;
-    *a=*b;
-    *b=temp;
+	*a += *b;
+	*b = *a -*b;
+	*a = *a - *b;
 }
-void bigtosmall(int *parr)
+void bigtosmall(int *parray)
 {
-    int i,j;
-    for(i=0;i<3;i++)
-    {
-        for(j=0;j<3;j++)
-        {
-            if(i!=j && parr[i]>parr[j])
-            swap(&parr[i],&parr[j]);
-        }
-    }
+	int i,j;
+	if (*(parray+1) < *(parray+2))
+	{
+	swap(parray+1,parray+2);
+	}
+	if(*parray < *(parray+1))
+	{
+		swap(parray,parray+1);
+	}
+	if(*parray < *(parray+2))
+	{
+		swap(parray,parray+2);
+	}
 }
 int main()
 {
-    int arr[3]={1,2,3};
-    int *parr=arr;
-    printf("%d %d %d\n",arr[0],arr[1],arr[2]);
-    bigtosmall(parr);
-    printf("%d %d %d",arr[0],arr[1],arr[2]);
+    int array[3]={1,2,3};
+    int *parray=&array[0];
+    printf("%d %d %d\n",array[0],array[1],array[2]);
+    bigtosmall(parray);
+    printf("%d %d %d",array[0],array[1],array[2]);
 }
