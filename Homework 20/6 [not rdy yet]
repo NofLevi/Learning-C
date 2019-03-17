@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <string.h>
-char get_id_num ()//checking 8 numbers.
+char get_id_num (char id[])//checking 8 numbers.
 {
-	char id[20];
 	int temp=1;
+	char add[2]={'0','\0'};
 	printf("Enter your ID [8 numbers]: ");
 	gets(id);
 	temp = strlen(id);
@@ -13,6 +13,7 @@ char get_id_num ()//checking 8 numbers.
 		gets(id);
 		temp = strlen(id);
 	}
+	strcat(id,add)
 }
 int char_to_int(char id[])//changing from char to int
 {
@@ -39,7 +40,13 @@ int calc_sb()//finding the 9th number
 }
 int add_sub() //adding the 9th number
 {
-	c
-	strcat[]	
+	intid[8]=lastnum;	
+}
+int main()
+{
+	char id[8];
+	get_id_num(id[]);
+	add_sb(id[]);
+	
 }
 
