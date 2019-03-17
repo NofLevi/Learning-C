@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <string.h>
+char get_id_num ()//checking 8 numbers.
+{
+	char id[20];
+	int temp=1;
+	printf("Enter your ID [8 numbers]: ");
+	gets(id);
+	temp = strlen(id);
+	while (temp!=8)
+	{
+		printf("your id must contain 8 numbers try again: ");
+		gets(id);
+		temp = strlen(id);
+	}
+}
+int char_to_int(char id[])//changing from char to int
+{
+	int intid,i;
+	for(i=0;i<8;i++)
+	{
+		intid[i]=id[i];
+		intid[i]-=48;
+	}
+}
+int calc_sb()//finding the 9th number
+{
+	int tempid[8],i,sum=0,lastnum;
+	for(i=0;i<8;i++)
+	{
+		tempid[i]=intid[i];
+		if(i%2!=0)
+		{
+			tempid[i]*2;
+		}
+		sum+=tempid[i];
+	}
+	lastnum=10-(sum%10);
+}
+int add_sub() //adding the 9th number
+{
+	c
+	strcat[]	
+}
+
