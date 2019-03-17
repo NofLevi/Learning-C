@@ -13,40 +13,46 @@ char get_id_num (char id[])//checking 8 numbers.
 		gets(id);
 		temp = strlen(id);
 	}
-	strcat(id,add)
+	strcat(id,add);
 }
 int char_to_int(char id[])//changing from char to int
 {
-	int intid,i;
+	int i;
 	for(i=0;i<8;i++)
 	{
-		intid[i]=id[i];
-		intid[i]-=48;
+		id[i]-=48;
+		
 	}
 }
-int calc_sb()//finding the 9th number
+int calc_sb(char id[],int *plastnum)//finding the 9th number
 {
-	int tempid[8],i,sum=0,lastnum;
+	int tempid[8],i,sum=0;
+	char_to_int(id);
 	for(i=0;i<8;i++)
 	{
-		tempid[i]=intid[i];
+		tempid[i]=id[i];
 		if(i%2!=0)
 		{
-			tempid[i]*2;
+			tempid[i]*=2;
 		}
 		sum+=tempid[i];
 	}
-	lastnum=10-(sum%10);
+	*plastnum=(10-(sum%10));
 }
-int add_sub() //adding the 9th number
+int add_sb(char id[]) //adding the 9th number
 {
-	intid[8]=lastnum;	
+	int lastnum=0;
+	int *plastnum=&lastnum;
+	calc_sb(id,plastnum);
+	id[8]=lastnum;	
 }
 int main()
 {
 	char id[8];
-	get_id_num(id[]);
-	add_sb(id[]);
+	get_id_num(id);
+	add_sb(id);
+	printf("%d%d%d%d%d%d%d%d%d",id[0],id[1],id[2],id[3],id[4],id[5],id[6],id[7],id[8]);
 	
 }
+
 
