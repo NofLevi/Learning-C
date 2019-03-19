@@ -1,0 +1,22 @@
+#define N 3
+#include <stdio.h>
+void func(int *parray,int *parrayend)
+{
+	for(parray;parray<parrayend;parray++)
+	{
+		*parray *= *parray;
+	}
+	parrayend -= N ;
+	parray-=1;
+	for(parrayend; parray >= parrayend ;parray--)
+	{
+		printf("%d ",*parray);
+	}
+}
+int main()
+{
+	int array[N]={1,2,3};
+	int *parray =&array[0];
+	int *parrayend = &array[N];
+	func(parray,parrayend);
+}
