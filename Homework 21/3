@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <string.h>
+void func (char *pstart,char *pend,int length)
+{
+	if(length%2==0)
+	{
+		for(pstart;pstart<pend;pstart++,pend--)
+		{
+			length = *pstart;
+			*pstart = *pend;
+			*pend = length;
+		}
+	}
+	else
+	{
+		for(pstart;pstart==pend;pstart++,pend--)
+		{
+			length = *pstart;
+			*pstart = *pend;
+			*pend = length;
+		}	
+	}
+}
+int main()
+{
+	int length;
+	char st[20];
+	printf("Enter a string: ");
+	gets(st);
+	length = strlen(st);
+	char *pstart = &st[0];
+	char *pend = &st[length];
+	func(pstart,pend,length);	
+}
