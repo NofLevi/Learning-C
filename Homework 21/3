@@ -1,23 +1,23 @@
-#define N 6
+#define N 5
 #include <stdio.h>
 #include <string.h>
 void func(char *pstart,char *pend)
 {
-	while (pstart<pend)
-		{
-			char temp;
-			temp = *pstart;
-			*pstart = *pend;
-			*pend = temp;
-			pstart++;
-			pend--;
-		}
+    while (pstart<pend)
+        {
+            char temp;
+            temp = *pstart;
+            *pstart = *pend;
+            *pend = temp;
+            pstart++;
+            pend--;
+        }
 }
 int main()
 {
-	char st[N] = "Hello";
-	char *pstart = st;
-	char *pend = st+(N-1);
-	func(pstart,pend);
-	printf("%s",st);	
+    char st[N] = "Hello";
+    char *pstart = &st[0];
+    char *pend = &st[N-1];
+    func(pstart,pend);
+    puts(st);    
 }
