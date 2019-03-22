@@ -1,0 +1,16 @@
+#include <stdio.h>
+int func(int *array,int x)
+{
+	int *p = array;
+	while(*array != x)
+	{
+		array++;
+	}
+	return array - p;
+}
+int main()
+{
+	int array[10]= {1,2,2,6,3,3,4,4,4,-1}, x = 3,index;
+	index = func(array,x);
+	printf("%d",index);
+}
