@@ -1,0 +1,21 @@
+#include <stdio.h>
+int func(char *st)
+{
+	int count = 0;
+	while(*st != '\0')
+	{
+		count++;
+		st++;
+	}
+	return count;
+}
+int main()
+{
+	int count;
+	char st[20];
+	printf("Enter a string: ");
+	gets(st);
+	count = func(st);
+	printf("strlen = %d",count);
+	
+}
