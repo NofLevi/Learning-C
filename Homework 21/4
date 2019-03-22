@@ -9,13 +9,29 @@ int func(char *st)
 	}
 	return count;
 }
+void func2(char *st,char *st2)
+{
+	while (*st!='\0')
+	{
+		st++;
+	}
+	while(*st2 != '\0')
+	{
+		*st = *st2;
+		st++,st2++;
+	}
+}
 int main()
 {
-	int count;
-	char st[20];
+	int length;
+	char st[20],st2[20];
 	printf("Enter a string: ");
 	gets(st);
-	count = func(st);
-	printf("strlen = %d",count);
-	
+	length = func(st);
+	printf("strlen = %d\n",length);
+	printf("Enter 2nd string: ");
+	gets(st2);
+	length += func(st2);
+	func2(st,st2);
+	puts(st);
 }
