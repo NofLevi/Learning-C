@@ -1,0 +1,16 @@
+#include <stdio.h>
+int func(int *array,int length)
+{
+	int i,lowest = 100;
+	for(i=0;i<length;i++)
+	{
+		if (*(array+i) < lowest)
+		lowest = *(array+i);
+	}
+	return lowest;
+}
+int main()
+{
+	int array[4] = {8,8,9,1},array2[7] = {9,8,9,7,3,8,6},ans;
+	printf("the lowest in the first is %d and for the second is %d",func(array,4),func(array2,7));
+}
