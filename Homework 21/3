@@ -1,16 +1,17 @@
 #define N 5
+#define N2 8
 #include <stdio.h>
 #include <string.h>
-void func(char *pstart,char *pend)
+void func(char *pstart2,char *pend2)
 {
-    while (pstart<pend)
+    while (pstart2<pend2)
         {
             char temp;
-            temp = *pstart;
-            *pstart = *pend;
-            *pend = temp;
-            pstart++;
-            pend--;
+            temp = *pstart2;
+            *pstart2 = *pend2;
+            *pend2 = temp;
+            pstart2++;
+            pend2--;
         }
 }
 int main()
@@ -19,5 +20,11 @@ int main()
     char *pstart = &st[0];
     char *pend = &st[N-1];
     func(pstart,pend);
-    puts(st);    
+    puts(st);   
+	
+	char st2[N2] = "abcdefg";
+	char *pstart2 = &st2[3];
+	char *pend2 = &st[N2-1];
+	func(pstart2,pend2);
+	puts(st2);
 }
