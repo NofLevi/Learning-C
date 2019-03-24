@@ -1,0 +1,13 @@
+#include <stdio.h>
+int func(mat[N][M])
+{
+	int i,j,count=0;
+	for(i=0;i<N;i++)
+	{
+		for(j=0;j<M;j++)
+		{
+			count++;
+		}
+	}
+	printf("the numbers of numbers in the mat are %d",count);
+}
