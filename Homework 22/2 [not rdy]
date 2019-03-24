@@ -1,0 +1,22 @@
+#define N 1
+#include <stdio.h>
+int main()
+{
+	int i,j=1;
+	char *st[1][N];
+	for(i=0;i<N;i++)//getting names
+	{
+		printf("Enter the %d name: ",j);
+		gets(st[0][i]);
+		i++;
+	}
+	
+	for(i=0;i<N;i++)
+	{
+		for(j=0;j!=' ';j++)
+		{
+			printf("%c",st[0][N]);
+		}
+	}
+	
+}
