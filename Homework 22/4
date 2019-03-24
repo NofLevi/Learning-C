@@ -1,0 +1,20 @@
+#include <stdio.h>
+int func(mat[N][M],mat2[M][N])
+{
+	int i,j,i2,j2;
+	for(i=0;i<N;i++)
+	{
+		for(j=0;j<M;j++)
+		{
+			for(i2=0;i2<M;i2++)
+			{
+				for(j2=0;j2<N;j2++)
+				{
+					if(mat[i][j]== mat2[i2][j2])
+					return 1;
+				}
+			}
+		}
+	}
+	return 0;
+}
