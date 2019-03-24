@@ -1,13 +1,13 @@
 #include <stdio.h>
-int func(mat[N][M])
+int func(mat[N][N])
 {
-	int i,j,count=0;
+	int i,j,sum = 0;
 	for(i=0;i<N;i++)
 	{
 		for(j=0;j<M;j++)
 		{
-			count++;
+			sum+=mat[i][j];
 		}
 	}
-	printf("the numbers of numbers in the mat are %d",count);
+	printf("the sum of numbers in the mat are %d",sum);
 }
