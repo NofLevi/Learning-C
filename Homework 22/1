@@ -2,7 +2,7 @@
 #include <stdio.h>
 int main()
 {
-	char st[N][20] = {"Idan Yoffe","Nof Levi"};
+	char st[N][20] = {"Try This","Check Up"};
 	int i,j;
 	for(i=0;i<N;i++)
 	{
@@ -10,8 +10,7 @@ int main()
 		for(j=0;st[i][j] != '\0';j++)
 		{
 			if(st[i][j] == ' ')
-			j++;
-			printf(".%c\n",st[i][j]);
+			printf(".%c\n",st[i][j+1]);
 		}
 	}
 	
