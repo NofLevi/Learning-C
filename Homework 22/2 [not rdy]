@@ -1,21 +1,16 @@
-#define N 1
+#define N 2
 #include <stdio.h>
 int main()
 {
-	int i,j=1;
-	char *st[1][N];
-	for(i=0;i<N;i++)//getting names
-	{
-		printf("Enter the %d name: ",j);
-		gets(st[0][i]);
-		i++;
-	}
-	
+	char st[N][20] = {"Try This","Check Up"};
+	int i,j;
 	for(i=0;i<N;i++)
 	{
-		for(j=0;j!=' ';j++)
+		printf("%c",st[i][0]);
+		for(j=0;st[i][j] != '\0';j++)
 		{
-			printf("%c",st[0][N]);
+			if(st[i][j] == ' ')
+			printf(".%c\n",st[i][j+1]);
 		}
 	}
 	
