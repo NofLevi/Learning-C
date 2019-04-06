@@ -6,7 +6,6 @@ int func(char st[],char tav)
 	{
 		if (*st== tav)
 		count++;
-		//printf("%c",*st);
 		st++;
 		func(st,tav);
 	}
@@ -16,6 +15,5 @@ int main()
 {
 	char st[10]= "helloll";
 	char tav ='l';
-	//func(st,tav);
 	printf("%d ",func(st,tav)); 
 } 
