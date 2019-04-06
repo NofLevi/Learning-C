@@ -1,0 +1,13 @@
+#include <stdio.h>
+unsigned func(int n,int m)
+{
+	if(n>1)
+	{
+		return func(n-1,m)+m;
+	}
+}
+int main()
+{
+	int n=5,m=5;
+	printf("%d",func(n,m));
+}
