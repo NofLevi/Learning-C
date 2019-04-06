@@ -1,0 +1,16 @@
+#include <stdio.h>
+void func(char *st)
+{
+	if(*st!='\0')
+	{ 
+	if(*st>96)
+	*st-=32;
+	printf("%c",*st);
+	func(++st);
+	}
+}
+int main()
+{
+	char st[20]= "DSbgvbDYTfdsdKIU";
+	func(st);
+}
