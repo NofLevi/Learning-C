@@ -1,0 +1,20 @@
+#include <stdio.h>
+int func(char st[],char tav)
+{
+	static int count = 0;
+	if (*st==tav)
+	count++;
+	else if (st)
+	{
+	printf("s ");
+	func(st++,tav);
+	}
+	return count;
+
+}
+int main()
+{
+	char st[10]= "helloll";
+	char tav ='l';
+	printf("%d ",func(st,tav)); 
+} 
