@@ -1,0 +1,15 @@
+int func(int n,char st[])
+{
+	if(n>0)
+	{ 
+	puts(st);
+	func(--n,st);
+	}
+}
+#include <stdio.h>
+int main()
+{
+	int n = 5;
+	char st[5]= "hello0";
+	func(n,st);
+}
