@@ -18,7 +18,6 @@ void func(char st[])
 int main()
 {
 	char st[20]= "HelloWorld";
-	//printf("%d ",func(st));
 	func(st);
 	puts(st);
 	
