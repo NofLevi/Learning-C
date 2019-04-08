@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+void func(char st[])
+{
+	static int i=0;
+	static char temp;
+	int x = strlen(st)-1;
+	if(i-1<x/2)
+	{
+		temp = st[x-i];
+		st[x-i]=st[i];
+		st[i]=temp;
+		i++;
+		func(st);
+	}
+}
+	
+int main()
+{
+	char st[20]= "HelloWorld";
+	//printf("%d ",func(st));
+	func(st);
+	puts(st);
+	
+}
