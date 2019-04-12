@@ -1,18 +1,16 @@
 #define N 5
 #include <stdio.h>
-int func(int *array,int n)
+int func(int a[],int n)
 {
-	static int highest = 0;
-	if(n>=0)
-	{
-		if(*(array+n)>highest)
-		highest = *(array+n);
-		array++;
-	}
-	return highest;
+	if(n==1)
+	return a[n-1];
+	if(a[n-1]>func(a,n-1))
+	return a[n-1];
+	else
+	return func(a,n-1);
 }
 int main()
 {
-	int array[5]={1,2,3,4,5};
+	int array[5]={1,2,5,4,3};
 	printf("%d",func(array,N-1));
 }
