@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main()
+{
+	int i;
+	typedef struct stock{
+		char name[10];
+		int code;
+		int storage;
+	}stock;
+	stock s[4];
+	
+	for(i=0; i<4; i++) //input
+	{
+		printf("item %d: 1. name 2. code. 3.storage\n",i+1);
+		scanf("%s",&s[i]);
+		scanf("%d",&s[i].code);
+		scanf("%d",&s[i].storage);
+		printf("\n");
+	}
+	
+	for(i=0;i<4;i++)//output
+	{
+		printf("item s%d:\n",i+1);
+		puts(s[i].name);
+		printf("%d\n",s[i].code);
+		printf("%d\n",s[i].storage);
+	}
+}
