@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main()
+{
+	float change;
+	typedef struct shop{
+		char name[10];
+		int code;
+		float price;
+		int storage;
+	}shop;
+	shop apple = {"apple",300,5,1000};
+	printf("bekama ahozim amehir shel amotzar yale blyat: ");
+	scanf("%f",&change);
+	change = change/100 + 1;
+	apple.price *=change;
+	printf("%f",apple.price);
+}
