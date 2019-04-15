@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+typedef struct cars{
+	char manufacture[15];
+	int year;
+	int engine;
+	int price;
+}cars;
+
+void getinfo(struct cars car[])
+{
+	int i;
+	for(i=0;i<5;i++)
+	{
+	puts("Enter 1.Manufacture 2.year 3.engine power 4.price:");
+	scanf("%s",&car[i].manufacture);
+	scanf("%d",&car[i].year);
+	scanf("%d",&car[i].engine);
+	scanf("%d",&car[i].price);
+	}
+}
+
+int main()
+{
+	cars car[5];
+	getinfo(car);
+}
