@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 typedef struct cars{
 	char manufacture[15];
@@ -33,18 +34,39 @@ float average(struct cars car[])
 	
 }
 
-i
+int manusearch(struct cars car[],char manu2search[])
+{
+	int i,cmp;
+	for(i=0;i<5;i++)
+	{
+		cmp = strcmp(car[i].manufacture,manu2search);
+		if(cmp = 0)
+		return i;
+	}
+	return -1;
+}
 
 
 int main()
 {
+	char manu2search[15];
 	float averageprice;
+	int manusearchreturn;
 	cars car[5];
 	getinfo(car);
 	averageprice = average(car);
 	printf("the average price is: %f\n",averageprice);
-	manusearch();
-
-	
-	
+	printf("Enter a manu name to search: ");
+	scanf("%s",&manu2search);
+	manusearchreturn = manusearch(car,manu2search);
+	if (manusearchreturn >= 0)
+	{
+		printf("%s\n",car[manusearchreturn].manufacture);
+		printf("%d\n",car[manusearchreturn].year);
+		printf("%d\n",car[manusearchreturn].engine);
+		printf("%d",car[manusearchreturn].price);
+	}
+	else
+	printf("there no such a car");	
 }
+
