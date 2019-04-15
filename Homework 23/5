@@ -38,5 +38,6 @@ int main()
 	cars car[5];
 	getinfo(car);
 	averageprice = average(car);
-	printf("%f",averageprice);
+	printf("the average price is: %f\n",averageprice);
 }
+
