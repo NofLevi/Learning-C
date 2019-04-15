@@ -1,0 +1,27 @@
+#define year 2019
+#include <stdio.h>
+/*typedef struct birthdate{ // no idea how to do
+	day;
+	month;
+	year;
+}bdate;
+*/
+
+typedef struct workers{
+	char name[10];
+	int birthyear;
+	int salary;
+}workers;
+
+int main()
+{
+	int i;
+	workers worker[5] = {{"a",1950,3500},{"b",1988,1233},{"c",1999,23232},{"d",1920,12311},{"e",2001,233}};
+	for(i=0;i<5;i++)
+	{
+		if(year - worker[i].birthyear > 60)
+		printf("%s need to quit\n",worker[i].name);
+		else 
+		printf("%s can keep working\n",worker[i].name);
+	}
+}
