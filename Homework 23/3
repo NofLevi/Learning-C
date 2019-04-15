@@ -6,7 +6,7 @@ int salary;
 }workers;
 int main()
 {
-	int i;
+	int i,highest=0,lowest=1000000,lowestspot,highestspot;
 	workers worker[6] = 
 	{
 	{"check",15,1000},
@@ -17,5 +17,19 @@ int main()
 	{"wsdxz",65,233}
 	}
 	;
+	for(i=0;i<6;i++)
+	{
+		if(worker[i].salary<lowest)
+		{
+		lowest = worker[i].salary;
+		lowestspot = i;
+		}
+		if(worker[i].salary>highest)
+		{
+			highest =  worker[i].salary;
+			highestspot = i;
+		}
+	}
+	printf("the highest is %d worker with %d salary.\nand the lower is %d worker with %d salary",highestspot,highest,lowestspot,lowest);
 
 }
