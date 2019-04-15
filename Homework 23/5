@@ -41,6 +41,7 @@ int manusearch(struct cars car[],char manu2search[])
 	{
 		cmp = strcmp(car[i].manufacture,manu2search);
 		if(cmp = 0)
+		printf("okayu");
 		return i;
 	}
 	return -1;
@@ -51,7 +52,7 @@ int main()
 {
 	char manu2search[15];
 	float averageprice;
-	int manusearchreturn;
+	int manusearchreturn=10;
 	cars car[5];
 	getinfo(car);
 	averageprice = average(car);
@@ -61,6 +62,7 @@ int main()
 	manusearchreturn = manusearch(car,manu2search);
 	if (manusearchreturn >= 0)
 	{
+		printf("the car was found:\n");
 		printf("%s\n",car[manusearchreturn].manufacture);
 		printf("%d\n",car[manusearchreturn].year);
 		printf("%d\n",car[manusearchreturn].engine);
@@ -69,4 +71,3 @@ int main()
 	else
 	printf("there no such a car");	
 }
-
