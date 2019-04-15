@@ -19,6 +19,7 @@ void getinfo(struct cars car[])
 	scanf("%d",&car[i].price);
 	}
 }
+
 float average(struct cars car[])
 {
 	int i;
@@ -32,6 +33,9 @@ float average(struct cars car[])
 	
 }
 
+i
+
+
 int main()
 {
 	float averageprice;
@@ -39,5 +43,8 @@ int main()
 	getinfo(car);
 	averageprice = average(car);
 	printf("the average price is: %f\n",averageprice);
-}
+	manusearch();
 
+	
+	
+}
