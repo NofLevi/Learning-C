@@ -1,0 +1,21 @@
+#include <stdio.h>
+typedef struct workers{
+char name[10];
+int age;
+int salary;
+}workers;
+int main()
+{
+	int i;
+	workers worker[6] = 
+	{
+	{"check",15,1000},
+	{"test",23,3500},
+	{"as",25,7223},
+	{"sew",76,2322},
+	{"wexdf",23,6562},
+	{"wsdxz",65,233}
+	}
+	;
+
+}
