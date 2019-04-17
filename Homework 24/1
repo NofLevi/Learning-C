@@ -8,7 +8,8 @@ typedef struct exams{
 int main()
 {
 	int i,j,i2,j2,help=0,datecheck=0;
-	char temp[10];
+	char *temp[10];
+	char math[10]= "math",heb[10]="hebrew",eng[10] = "english",pc[10] = "pc";
 	float average=0;
 	exams exam[4][5] = //metrics
 	{
@@ -39,26 +40,21 @@ int main()
 	printf("amount of times u can get helpful objects: %d\n",help);
 	if(datecheck > 0)
 	printf("there are few exams in different classes in the same day.call us for more information :D\n\n");	
+	
+	
 	printf("date\tyehidot\tclass\n");
-	for(i=0;i<4;i++) // printing tablet
+	for(i=0;i<4;i++)
 	{
-		for(j=0;j<5;j++);
+		for(j=0;j<5;j++)
 		{
-			switch (i)
-			{
-				case 0:
-				temp = "math";
-				break;
-				case 1:
-				temp = "english";
-				break;
-				case 2:
-				temp = "pc";
-				break;
-				case 3:
-				temp = "hebrew";
-				break;
-			}
+			if(i==0)
+			strcpy(temp,math);
+			if(i==1)
+			strcpy(temp,eng);
+			if (i==2)
+			strcpy(temp,pc);
+			if(i==3)
+			strcpy(temp,heb);
 			printf("%s\t%d\t%s\n",exam[i][j].date,j+1,temp);
 		}
 	}
