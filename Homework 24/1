@@ -1,0 +1,65 @@
+#include <stdio.h>
+#include <string.h>
+typedef struct exams{
+	char date[10];
+	float timeofexams;
+	int help;
+}exams;
+int main()
+{
+	int i,j,i2,j2,help=0,datecheck=0;
+	char temp[10];
+	float average=0;
+	exams exam[4][5] = //metrics
+	{
+		{"25/2/19",2,1,"30/3/19",3,1,"12/1/19",3,0,"2/3/19",1,0,"6/6/19",2,0},//math
+		{"9/9/19",1,0,"8/8/19",4,0,"9/9/19",3,0,"1/1/19/",2,1,"2/2/19",2,1},//eng
+		{"25/2/19",2,1,"30/3/19",3,1,"12/1/19",3,0,"2/3/19",1,0,"6/6/19",2,0},//pc
+		{"9/9/19",1,0,"8/8/19",4,0,"9/9/19",3,0,"1/1/19/",2,1,"2/2/19",2,1}//heb
+	};
+	for(i=0;i<5;i++) // main func
+	{
+		for(j=0;j<4;j++)
+		{
+			average += exam[j][i].timeofexams;
+			if(exam[j][i].help == 1)
+			help++;
+			for(i2=0;i2<5;i2++)
+			{
+				for(j2=0;j2<4;j2++)
+				{
+					if(strcmp(exam[j][i].date,exam[j2][i2].date) == 0 && i != i2)
+					datecheck++;
+				}
+			}
+		}
+		printf("the average of %d yehidot is :%f\n",i+1,average/4);
+		average = 0;
+	}
+	printf("amount of times u can get helpful objects: %d\n",help);
+	if(datecheck > 0)
+	printf("there are few exams in different classes in the same day.call us for more information :D\n\n");	
+	printf("date\tyehidot\tclass\n");
+	for(i=0;i<4;i++) // printing tablet
+	{
+		for(j=0;j<5;j++);
+		{
+			switch (i)
+			{
+				case 0:
+				temp = "math";
+				break;
+				case 1:
+				temp = "english";
+				break;
+				case 2:
+				temp = "pc";
+				break;
+				case 3:
+				temp = "hebrew";
+				break;
+			}
+			printf("%s\t%d\t%s\n",exam[i][j].date,j+1,temp);
+		}
+	}
+}
