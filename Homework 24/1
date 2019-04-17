@@ -8,7 +8,7 @@ typedef struct exams{
 int main()
 {
 	int i,j,i2,j2,help=0,datecheck=0;
-	char *temp[10];
+	char temp[10];
 	char math[10]= "math",heb[10]="hebrew",eng[10] = "english",pc[10] = "pc";
 	float average=0;
 	exams exam[4][5] = //metrics
