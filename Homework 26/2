@@ -1,0 +1,32 @@
+#include <stdio.h>
+int main()
+{
+	int n = 0,n2=0,i=0;
+	int *p;
+	
+	printf("Enter The Amount of Peoples for the first registration: "); // first registration 
+	scanf("%d",&n);
+	p = (int*) malloc(n*sizeof(int));
+	for(i=0;i<n;i++)
+	{
+		printf("Enter the age of the %d person: ",i+1);
+		scanf("%d",&p[i]);
+	}
+	
+	printf("\nEnter the amount of peoples for the second registartion: "); // second registration
+	scanf("%d",&n2);
+	n+=n2;
+	p = realloc(p,n*sizeof(int));
+	while(i<n)
+	{
+		printf("Enter the age of the %d person: ",i+1);
+		scanf("%d",&p[i]);
+		i++;
+	}
+	printf("\nlist of the ages: \n"); //printing the whole array
+	for(i=0;i<n;i++)
+	{
+		printf("%d person age is:%d\n",i+1,p[i]);
+	}
+	
+}
