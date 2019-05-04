@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main()
+{
+	char *p;
+	p = (char*) malloc(20*sizeof(char));
+	printf("Enter a string: ");
+	gets(p);
+	puts(p);
+	free(p);
+}
