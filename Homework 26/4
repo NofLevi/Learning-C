@@ -24,15 +24,16 @@ void func1(missing *p,int n) // printing the missing list PART 3
 	}
 }
 
-int func2(Products product[],missing *p,char fruitsearch[],int n)// PART4 searching fruit function
+int func2(Products product[],char fruitsearch[])// PART4 searching fruit function
 {
 	int i,temp;
 	for(i=0;i<N;i++) // searching in the full storage
 	{
-		printf("%s == %s\n",product[i].name,fruitsearch); //DAFUQ IS THIS RAWRAWRAWRAWR
 		temp = strcmp(product[i].name,fruitsearch);
 		if (temp == 0);
+		{
 		return i;
+		}
 	}
 	return 100;
 }
@@ -66,13 +67,11 @@ int main()
 	
 	printf("\nEnter the product ur looking for: "); //PART 4 searching for specific product function
 	scanf("%s",&fruitsearch);
-	spot = func2(product,p,fruitsearch,n);
-	if (spot = 100)
+	spot = func2(product,fruitsearch);
+	if (spot == 100)
 	{
 	printf("the fruit was not found try again in other day :d");
 	}
 	else
 	printf("Fruit Name:%s\nFruit Code:%d\nFruit Amount:%d\nFruit Price: %d",product[spot].name,product[spot].code,product[spot].amount,product[spot].price);
-	
-	
 }
