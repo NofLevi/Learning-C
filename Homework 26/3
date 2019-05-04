@@ -1,0 +1,44 @@
+#define N 2
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct Info{
+	int code;
+	char name[20];
+	int amount;
+	int price;
+}Products;
+
+typedef struct missing{
+	char name[20];
+	int code;
+}missing;
+
+void func1()
+
+int main()
+{
+	int i,sumprice=0,n;
+	missing *p;
+	Products product[N] = {{123,"Apple",300,2},{321,"Bannana",250,5}};
+	
+	for(i=0;i<N;i++)// price of whole products [WORKING] PART 1
+	{
+		sumprice += (product[i].price * product[i].amount);
+	}
+	printf("the price of the whole products are: %d\n",sumprice);
+	
+	printf("Enter the nubmer of missing products: ");//missing products [WORK] PART 2
+	scanf("%d",&n);
+	p = realloc(p,n*sizeof(missing));
+	for(i=0;i<n;i++)
+	{
+		printf("Enter the %d missing product name: ",i+1);
+		scanf("%s",p[i].name);
+		printf("Enter the missing products code:");
+		scanf("%d",&p[i].code);
+	}
+	
+	func1()
+	
+	
+}
