@@ -1,0 +1,26 @@
+#include <stdio.h>
+void func(int array[],char st[])
+{
+	static int i=0;
+	if(st[i])
+	{
+	if(st[i] >76 && st[i]<123)
+	array[i] = 1;
+	
+	i++;
+	func(array,st);
+	}
+	
+}
+int main()
+{
+	int i;
+	int array[26]={0};
+	char st[26]= "aaaaaaaaaaAAAAAAAAAAaaaaaa";
+	func(array,st);
+	
+	for(i=0;i<26;i++)//check
+	{
+		printf("%d",array[i]);
+	}
+}
