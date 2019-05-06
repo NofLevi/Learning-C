@@ -1,6 +1,7 @@
 #define N 2
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 typedef struct Info{
 	int code;
 	char name[20];
@@ -13,12 +14,36 @@ typedef struct missing{
 	int code;
 }missing;
 
-void func1()
+void func1(missing *p,int n) // printing the missing list PART 3
+{
+	int i;
+	puts("missing products list:");
+	for(i=0;i<n;i++)
+	{
+		printf("product name:%s\nproduct code:%d\n",p[i].name,p[i].code);
+	}
+}
+
+int func2(Products product[],char fruitsearch[])// PART4 searching fruit function
+{
+	int i,temp;
+	for(i=0;i<N;i++) // searching in the full storage
+	{
+		temp = strcmp(product[i].name,fruitsearch);
+		if (temp == 0);
+		{
+		return i;
+		}
+	}
+	return 100;
+}
 
 int main()
 {
 	int i,sumprice=0,n;
+	char fruitsearch[20];
 	missing *p;
+	int spot;
 	Products product[N] = {{123,"Apple",300,2},{321,"Bannana",250,5}};
 	
 	for(i=0;i<N;i++)// price of whole products [WORKING] PART 1
@@ -27,7 +52,7 @@ int main()
 	}
 	printf("the price of the whole products are: %d\n",sumprice);
 	
-	printf("Enter the nubmer of missing products: ");//missing products [WORK] PART 2
+	printf("\nEnter the nubmer of missing products: ");//missing products [WORK] PART 2
 	scanf("%d",&n);
 	p = realloc(p,n*sizeof(missing));
 	for(i=0;i<n;i++)
@@ -37,8 +62,16 @@ int main()
 		printf("Enter the missing products code:");
 		scanf("%d",&p[i].code);
 	}
+	printf("\n");
+	func1(p,n); // PART 3 function who print the missing products
 	
-	func1()
-	
-	
+	printf("\nEnter the product ur looking for: "); //PART 4 searching for specific product function
+	scanf("%s",&fruitsearch);
+	spot = func2(product,fruitsearch);
+	if (spot == 100)
+	{
+	printf("the fruit was not found try again in other day :d");
+	}
+	else
+	printf("Fruit Name:%s\nFruit Code:%d\nFruit Amount:%d\nFruit Price: %d",product[spot].name,product[spot].code,product[spot].amount,product[spot].price);
 }
