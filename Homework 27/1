@@ -1,0 +1,70 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+typedef struct hospital{
+	char fname[20];
+	char lname [20];
+	int age;
+	int type ;
+	int mehosan;
+}clients;
+
+typedef struct storage{
+	int type[4];
+	int price[4];
+	int amount[4];
+}storage;
+
+typedef struct general{
+	char fname[20];
+	char lname[20];
+}newlist;
+
+int agetotype(int age)
+{
+	int n;
+	if(n<=3)
+	return 1;
+	if(n>3 && n<=16)
+	return 2;
+	if(n>16 && n<=65)
+	return 3;
+	if(n>66)
+	return 4;
+}
+
+int main()
+{
+	clients client[20000];
+	storage storage[4];
+	int i,sumprice = 0,n=1;
+	int sumppls[4]={0};
+	newlist *p;
+	
+	for(i=0;i<20000;i++)
+	{
+		client[i].type = agetotype(client[i].age); // checking the type
+		if(client[i].mehosan == 0)
+		{
+		sumprice += storage.price[client[i].type]; // adding the price incase hes not mehosan
+		sumppls[client[i].type] += 1;	//checking the ppls per type who needs it
+		}
+	}
+	printf("the overall price of the hisonim is:%d",sumprice);
+	
+	for(i=0;i<4;i++) // how many hiosnim need to invite
+	{
+		if(storage.amount[i]-sumppls[i] > 0)
+		printf("you have %d hisonim more then u need",storage.amount[i]-sumppls[i]);
+		if(storage.amount[i]-sumppls[i] < 0)
+		printf("you need to invite more %d hisonim",storage.amount[i] - sumppls[i]);
+	}
+	
+	p = (newlist*) malloc(n*sizeof(newlist)); // list of the mehosanim
+	for(i=0;i<20000;i++)
+	{
+		if(client[i].mehosan == 1 )
+		n+=1;
+		p = (newlist*)realloc(p,(n+1)*sizeof(newlist));
+	}
+}
