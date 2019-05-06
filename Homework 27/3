@@ -1,0 +1,19 @@
+#include <stdio.h>
+void func(int n,char st[])
+{
+	static int i=0;
+	if(n!=0)
+	{
+		func(n/10,st);
+		st[i] = (n%10)+48;
+		i++;
+	}
+
+}
+int main()
+{
+	int n = 1995,i;
+	char st[5];
+	func(n,st);
+	puts(st);
+}
