@@ -18,8 +18,9 @@ char *str_func(char *str, char ch,int num)
 			ptr[j]=str[i];
 			j++;
 		}
+		if(j>20)
+		ptr = (int*) realloc (ptr,(j+1)*sizeof(char));
 	}
-	ptr[j] = '\0';
 	puts(ptr);
 	
 	if(j>num)
