@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+char *str_func(char *str, char ch,int num) 
+{
+	int i,j;
+	char *ptr;
+	ptr = (char*) malloc (20*sizeof(char));
+	for(i=0,j=0;str[i];i++)
+	{
+		if(str[i] != ch && i<num)
+		{
+			ptr[j] = str[i];
+			j++;
+		}
+		else if(i>num)
+		{
+			ptr[j]=str[i];
+			j++;
+		}
+	}
+	ptr[j] = '\0';
+	puts(ptr);
+	
+	if(j>num)
+	{
+	free(ptr);
+	return NULL;
+	}
+	
+	else 
+	return ptr;
+}
+
+
+
+int main()
+{
+	char str[20] = "Hello World",ch = 'o';
+	int num = 4;
+	str_func(str,ch,num);
+}
