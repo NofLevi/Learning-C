@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct data
+{
+	int num;
+	struct data * next;
+}data;
+
+void printnode(data *head) // should print 
+{
+	data *p;
+	p = head->next;
+	while(p)
+	{
+		printf("%d",p->num);
+		p = p->next;
+	}
+}
+
+data * addnode(int x,data *p) //add a node
+{
+	p = (data*) malloc (sizeof(data));
+	p -> num = x;
+	p -> next = NULL;
+	return p;// and here
+}
+
+
+int main()
+{
+	int x;
+	data * head, *p;
+	head = (data*) malloc (sizeof(data));
+	head -> num = 3;
+	head -> next = NULL;
+	printf("enter a int:");
+	scanf("%d",&x);
+	head -> next = addnode(x,p); // problem is here 
+	printnode(head);
+}
