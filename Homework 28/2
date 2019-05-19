@@ -1,0 +1,61 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct data
+{
+	int num;
+	struct data * next;
+}data;
+
+int countnode(data *head) //counting the lists
+{
+	if(head->next)
+	return countnode(head->next)+1;
+}
+
+void printnode(data *head) // print function
+{
+	data *p;
+	p = head->next;
+	while(p)
+	{
+		printf("%d ",p->num);
+		p = p->next;
+	}
+	printf("\n\n");
+}
+
+data * addnode(int x) //add a node
+{
+	data *p;
+	p = (data*) malloc (sizeof(data));
+	p -> num = x;
+	p -> next = NULL;
+	return p;
+}
+int main()
+{
+	int temp,i,x;
+	data * head,*p;
+	head = (data*)malloc(sizeof(data));
+	printf("How many lists do u want ?");
+	scanf("%d",&x);
+	for(i=0;i<x;i++)
+	{
+		printf("Enter the value:");
+		scanf("%d",&temp);
+		if(i==0)
+		{
+		head -> next = addnode(temp);
+		p = head ->next;
+		}
+		else 
+		{
+			p-> next = addnode(temp);
+			p = p->next;
+		}
+	}	
+	printnode(head);
+	x = countnode(head);
+	printf("%d",x);
+}
