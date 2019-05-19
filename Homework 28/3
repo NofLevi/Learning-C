@@ -1,0 +1,83 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct data
+{
+	int num;
+	struct data * next;
+}data;
+
+int nodeorder(data *head) //checking if the order going for bottom to top
+{
+    data *p;
+    p = head;
+    while(p)
+    {
+        if(p->num < p->next->num)
+        return 0;
+        
+        else
+        p = p->next;
+    }    
+    return 1;
+}
+
+int countnode(data *head) //counting the lists
+{
+	if(head->next)
+	return countnode(head->next)+1;
+}
+
+void printnode(data *head) // print function
+{
+	data *p;
+	p = head->next;
+	printf("Printing function: ");
+	while(p)
+	{
+		printf("%d ",p->num);
+		p = p->next;
+	}
+	printf("\n");
+}
+
+data * addnode(int x) //add a node
+{
+	data *p;
+	p = (data*) malloc (sizeof(data));
+	p -> num = x;
+	p -> next = NULL;
+	return p;
+}
+int main() //MAIN FUNCTION
+{
+	int temp,i,x;
+	data * head,*p;
+	head = (data*)malloc(sizeof(data));
+	printf("How many lists do u want ?\n");
+	scanf("%d",&x);
+	for(i=0;i<x;i++)
+	{
+		printf("Enter the value:");
+		scanf("%d",&temp);
+		if(i==0)
+		{
+		head -> next = addnode(temp);
+		p = head ->next;
+		}
+		else 
+		{
+			p-> next = addnode(temp);
+			p = p->next;
+		}
+	}	
+	printnode(head);
+	
+	printf("The linked list have  have %d lists inside\n",countnode(head));
+	
+	x = nodeorder(head->next);
+	if(x=0)
+	printf("the order isnt properly");
+	else
+	printf("the order of the list is from lower to upper");
+}
