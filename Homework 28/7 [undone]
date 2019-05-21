@@ -1,0 +1,62 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct data
+{
+	int code;
+	int amount;
+	int price;
+	struct data * next;
+}data;
+
+void listmaker(data *head)
+{
+	data *newp[4];
+	data *p = head->next;
+	int i;
+	for(i=0;i<4;i++)
+	{
+		if(p==0)
+		{
+		p->code = i;
+		p->amount = i;
+		p->price = i;
+		}
+		
+		else
+		{
+		newp[i]= (data*)malloc(sizeof(data));
+		newp[i]->code = i;
+		newp[i]->amount = i;
+		newp[i]->price = i;
+		p->next = newp;
+		}
+	}
+	
+}
+
+data * highest(data *head)
+{
+	data *p= head,*newp;
+	int temp=0,highest=0;
+	while(p)
+	{
+		temp = p->amount * p->price;
+		if(temp>highest)
+		{
+			newp = p;
+			highest = temp;
+			p = p->next;
+		}
+	}
+	return newp;
+}
+
+int main()
+{
+	data *head,*p;
+	head = (data*)malloc(sizeof(data));
+	listmaker(head);
+	p = highest(head->next);
+	printf("code:%d\tamount:%d\tprice:%d\ttotal:%d",p->code,p->amount,p->price,p->amount*p->price);
+}
