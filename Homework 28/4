@@ -52,6 +52,16 @@ void printnode(data *head) // print function
 	printf("\n");
 }
 
+void freelo(data *head)
+{
+	if(head)
+	{
+		freelo(head->next);
+	}
+	free(head);
+	
+}
+
 data * addnode(int x) //add a node
 {
 	data *p;
