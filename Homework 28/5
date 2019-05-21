@@ -1,0 +1,105 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct data
+{
+	int num;
+	struct data * next;
+}data;
+
+void addfirst(data *head,int x)//add a variable after the head
+{
+	data *p;
+	p = (data*)malloc(sizeof(data));
+	p ->num = x;
+	p -> next = head->next;
+	head-> next = p;
+	
+}
+
+void catnode(data *head,data *head2) // combining 2 lists
+{
+	data *p;
+	p = head;
+	while(p->next)
+	{
+		p = p->next;
+	}
+	p->next = head2;
+}
+
+int nodeorder(data *head) //checking if the order going for bottom to top
+{
+    data *p;
+    p = head;
+    while(p)
+    {
+        if(p->num < p->next->num)
+        return 0;
+        
+        else
+        p = p->next;
+    }    
+    return 1;
+}
+
+int countnode(data *head) //counting the lists
+{
+	if(head->next)
+	return countnode(head->next)+1;
+}
+
+void printnode(data *head) // print function
+{
+	data *p;
+	p = head->next;
+	printf("Printing function: ");
+	while(p)
+	{
+		printf("%d ",p->num);
+		p = p->next;
+	}
+	printf("\n");
+}
+
+void freelo(data *head)
+{
+	if(head)
+	{
+		freelo(head->next);
+	}
+	free(head);
+	
+}
+
+data * addnode(int x) //add a node
+{
+	data *p;
+	p = (data*) malloc (sizeof(data));
+	p -> num = x;
+	p -> next = NULL;
+	return p;
+}
+int main() //MAIN FUNCTION
+{
+	int temp,i,x[4] = {1,2,3,4};
+	data * head,*p;
+	data * head2;
+	head = (data*)malloc(sizeof(data));
+	for(i=0;i<4;i++) // first list
+	{
+		if(i==0)
+		{
+		head -> next = addnode(x[i]);
+		p = head ->next;
+		}
+		else 
+		{
+			p-> next = addnode(x[i]);
+			p = p->next;
+		}
+	}
+	i = 2;
+	addfirst(head,i);
+	printnode(head);
+}
