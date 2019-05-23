@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct node{
+	int num;
+	struct node *next;
+}Node;
+
+int func(Node *head)
+{
+	static int inter = 0;
+	int i;
+	node *p;
+	p = head;
+	if(head)
+	{
+	inter++;
+	for(i=0;i<p->num;i++)
+	{
+		p = p->next;
+	}
+	func(p);
+	}
+	return inter;
+}
