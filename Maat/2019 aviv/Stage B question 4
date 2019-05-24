@@ -1,21 +1,31 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-typedef struct node{
-	int num;
-	struct node *next;
-}Node;
-
-int func(Node *head)
+int func(node *node)
 {
-	int count = 0
-	node *pos=head;
-	do{
-	int n=pos->num;
-	int i;
-	for(i=0;i<n;i++)
-	pos = pos-> next ;
-	count++;
+int i = 0,inter = 0,n = 0,j;
+node *p=head,*check = head->next;
+while(p!=check) // list length;
+{
+	n++;
+	check = check->next;
+}
+
+int array[n] = {0};
+while(p->num) // making 0 the used pointers
+{
+	array[i] = p->num;
+	p ->num = 0;
+	for(j=0;j<array[i];j++)
+	{
+		p = p->next;
 	}
-	while(pos!=head);
+	i++;
+	inter++;
+}
+
+p = head;
+for(i=0;i<n;i++) // fixing the old list
+{
+	p->num = array[i];
+	p = p ->next;
+}
+return inter;
 }
