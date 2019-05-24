@@ -1,23 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
 int func(node *node)
 {
-int i = 0,inter = 0,n = 0,j;
-node *p=head,*check = head->next;
-while(p!=check) // list length;
+int i = 0,inter = 0,n = 0,j,limit;
+node *p=head->next;
+
+while(p!=head) // list length;
 {
 	n++;
-	check = check->next;
+	p = p->next;
 }
 
-int array[n] = {0};
-while(p->num) // making 0 the used pointers
+int array[n] = {0};//making the array equal to the list
+
+for(i=0;i<n;i++)
 {
 	array[i] = p->num;
+	p = p->next; 
+}
+
+p = head;
+
+while(p->num) // making 0 in the used pointers
+{
+	limit = p ->num;
 	p ->num = 0;
-	for(j=0;j<array[i];j++)
+	for(j=0;j<limit;j++)
 	{
 		p = p->next;
 	}
-	i++;
 	inter++;
 }
 
