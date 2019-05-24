@@ -8,18 +8,14 @@ typedef struct node{
 
 int func(Node *head)
 {
-	static int inter = 0;
+	int count = 0
+	node *pos=head;
+	do{
+	int n=pos->num;
 	int i;
-	node *p;
-	p = head;
-	if(head)
-	{
-	inter++;
-	for(i=0;i<p->num;i++)
-	{
-		p = p->next;
+	for(i=0;i<n;i++)
+	pos = pos-> next ;
+	count++;
 	}
-	func(p);
-	}
-	return inter;
+	while(pos!=head);
 }
