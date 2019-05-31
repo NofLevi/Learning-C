@@ -1,0 +1,16 @@
+#include <stdio.h>
+int matlines(int *mat,int *newmat)
+{
+	int i,j=0;
+	for(i=0;i<36;i++)
+	{
+		if(*(mat+i)!=0)
+		{
+			*(newmat+j) = i;
+			j++;
+			*(newmat+j) = *(mat+i);
+			j++;
+		}
+	}
+	return (j-1)/2;
+}
