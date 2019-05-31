@@ -1,0 +1,19 @@
+#include <stdio.h>
+int * func(int mat[][6])
+{
+	int *p = NULL;
+	p = (int*) calloc (sizeof(int)*64);
+	int i,j=0;
+	for(i=0;i<36;i++)
+	{
+		if(*(mat+i))
+		{
+			p[j] = i;
+			j++;
+			p[j] = *(mat+i);
+			j++;
+		}
+	}
+	p = (int*)realloc(p,sizeof(int)*j;
+	return p;
+}
