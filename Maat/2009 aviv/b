@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+typedef struct gr 
+{
+	int num;
+	int mark; 
+	struct gr *next;
+}GRADE *fgrade;
+
+typedef struct st 
+{
+	long id;
+	char name[25];
+	GRADE *fgrade;
+	struct st *next;
+}STU;
+
+typedef struct
+{
+	int cnum;
+	int stunum;
+	STU *fstu;
+}CLASS;
+
+void avg(int k[])
+{
+	int n,ij,spot;
+	float avg[3] = {0};
+	STU *p;
+	for(i=0;i<3;i++)
+	{
+		n=0;
+		p = k[i]->fstut;
+		while(p)
+		{
+			n++;
+			avg[i]+=p->fgrade->next->next->mark;
+			p = p->next;
+		}
+		avg[i] /= n;
+		if (avg[i]>highest)
+		highest = avg[i];
+		spot = i;
+	}	
+	printf("the highest is class number:%d",spot+1);
+}
+
+int main()
+{
+	CLASS kitot[3];
+	
+}
