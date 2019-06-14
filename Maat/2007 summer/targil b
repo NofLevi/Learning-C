@@ -1,0 +1,37 @@
+#define N 5
+#define H 23
+#define D 7
+typedef struct 
+{
+	int pnum;
+	char pname[15];
+	int capacity;
+	int start;
+	int end;
+}PARK,*ppark;
+PARK parks[5];
+
+int check(int n,int s,int e,park p[],int pe[][D][N])
+{
+	int i,j;
+	for(i=0;i<D;i++)
+	{
+		for(j=0;j<H;j++)
+		{
+			if(!(j>s&&y<=e))
+			if(pe[n][i][j])
+			return 1;
+			return 0;
+		}
+	}
+}
+
+void sb(park p[],int pe[][D][H]);
+{
+	int i;
+	for(i=0;I<N;i++)
+	{
+		if(check(p[i],pnum,p[i].start,p[i].end,pe)
+		puts(p[i].pname);
+	}
+}
