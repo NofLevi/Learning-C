@@ -35,3 +35,27 @@ void sb(park p[],int pe[][D][H]);
 		puts(p[i].pname);
 	}
 }
+
+//PartB
+
+int check(int d,int t,int pe[][D][T])
+{
+int i;
+for(i=0;i<N;i++)
+{
+if(pe[i][d][t])
+return 0;
+}
+return 1;
+
+}
+
+void dtz(park p[],int pe[][D][H])
+{
+int i,j
+for(i=0;i<D;i++)
+{
+	for(j=0;j<H;j++)
+	{
+	if(check(i,j))
+	}
