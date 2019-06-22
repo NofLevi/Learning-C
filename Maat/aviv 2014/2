@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct string
+{
+	char string[50];
+}Strings;
+
+void Changeandcat(Strings st[],char *newst)
+{
+	int i,j,n=0;
+	for(i=0;i<4;i++)
+	{
+		for(j=0;st[i].string[j];j++)
+		{
+			if(st[i].string[j]< 'Z' && st[i].string[j]>'A' )
+			{
+				st[i].string[j]-=32;
+			}
+			
+			if(st[i].string[j]>'a' && st[i].string[j]< 'z')
+			{
+				
+			}
+			
+			else
+			{
+				st[i].string[j] = '_';
+			}
+			n++;
+			newst = (char*)realloc(newst,n*sizeof(char));
+			newst[n-1]=st[i].string[j];
+		}
+	}
+}
+
+int main()
+{
+	int i;
+	Strings st[4];
+	for(i=0;i<4;i++)
+	{
+		scanf("%s",&st[i]);
+	}
+	char *newst;
+	newst = (char*)calloc(0,sizeof(char)); 
+	Changeandcat(st,newst);
+	puts(newst);
+}
